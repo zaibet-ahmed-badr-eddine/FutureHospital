@@ -25,4 +25,24 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function calendar()
+    {
+
+        return view('panel.calendar');
+
+    }
+
+    public function ajouterMembre()
+    {
+
+        return view('panel.ajoutermembre');
+
+    }
+    public function ajouterServices()
+    {
+
+        return view('panel.ajouterservice');
+
+    }
 }

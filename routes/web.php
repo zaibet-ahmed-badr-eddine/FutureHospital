@@ -35,3 +35,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/calendar', 'HomeController@calendar')->name('panel.calendar');
+Route::get('/addmembre', 'HomeController@ajouterMembre')->name('panel.ajoutermembre');
+Route::get('/addservice', 'HomeController@ajouterServices')->name('panel.ajouterservice');
+Route::resource('Membre','MembreController');
+
