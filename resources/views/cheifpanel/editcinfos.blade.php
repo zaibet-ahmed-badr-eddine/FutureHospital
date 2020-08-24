@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('cheifpanel.cheif')
 
 @section('content')
 
@@ -8,7 +8,7 @@
     </div>
     <!-- /.card-header -->
     <!-- form start -->
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="">
       
       <div class="card-body">
         
@@ -27,14 +27,7 @@
           <label for="exampleInputEmail1">Email address</label>
           <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter email">
         </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">mot de passe</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="mot de passe">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Confirmer mot de passe </label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="mot de passe">
-          </div>
+        
           <div class="form-group">
             <label for="exampleInputEmail1">lieu de naissance </label>
             <input type="text" class="form-control" id="exampleInputEmail1" name="bornplace" placeholder="Lieu de naissance">
@@ -57,7 +50,7 @@
               <option>Infirmiere</option>
               
             </select>
-          </div>
+          </div>--}}
 
 
         <div class="form-group">
@@ -79,10 +72,10 @@
       
       </div> 
 
-      <!-- /.card-body --> --}}
+      <!-- /.card-body --> 
 
       <div class="card-footer">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">confirmer</button>
       </div>
     </form>
   </div>

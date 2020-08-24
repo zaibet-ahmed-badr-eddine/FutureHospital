@@ -183,7 +183,7 @@
     <a href="index3.html" class="brand-link">
       <img src="{{ asset('dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">Admin Panel</span>
+      <span class="brand-text font-weight-light">chef service Panel</span>
     </a>
 
     <!-- Sidebar -->
@@ -204,7 +204,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           
-            <a href="/home" class="nav-link active">
+            <a href="/cheifdashboard" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -219,25 +219,30 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
-                Getion
-                <i class="right fas fa-angle-left"></i>
+                Gestion patient
+                
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="addservice" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ajouter Service</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="addmembre" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ajouter Membre</p>
-                </a>
-              </li>
-            </ul>
+        </li>
+
+
+
+
+
+        
+
+
+        <li class="nav-item has-treeview">
+            <a href="caddmembre" class="nav-link">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>
+                Ajouter membre
+               
+              </p>
+            </a>
+           
           </li>
+          
 
 
 
@@ -253,11 +258,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Chef Service</p>
-                </a>
-              </li>
+             
               <li class="nav-item">
                 <a href="pages/charts/flot.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -274,12 +275,7 @@
           </li>
 
 
-          <li class="nav-item">
-            <a href="" class="nav-link">
-              <i class="fas fa-circle nav-icon"></i>
-              <p>Liste des Services </p>
-            </a>
-          </li>
+          
 
      
 
@@ -292,7 +288,7 @@
           
           <li class="nav-header">EXAMPLES</li>
           <li class="nav-item">
-            <a href="calendar" class="nav-link">
+            <a href="ccalendar" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 Calendar
@@ -354,13 +350,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="editcheifinfos" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Modifier mes Infos</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
+                <a href="editcheifpassword" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Modifier Mot de Passe</p>
                 </a>
