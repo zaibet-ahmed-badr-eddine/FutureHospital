@@ -6,12 +6,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Contacts</h1>
+            <h1>INFIRMIERES</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Contacts</li>
+              <li class="breadcrumb-item active">infirmieres</li>
             </ol>
           </div>
         </div>
@@ -47,11 +47,11 @@
                 </div>
                 <div class="card-footer">
                   <div class="text-right">
-                    <a href="#" class="btn btn-sm bg-teal">
-                      <i class="fas fa-comments"></i>
+                    <a href="/editmeda" class="btn btn-sm btn-primary">
+                      <i class="fa fa-edit"></i> Modifier
                     </a>
-                    <a href="#" class="btn btn-sm btn-primary">
-                      <i class="fas fa-user"></i> View Profile
+                    <a href="#" class="btn btn-sm btn-danger">
+                      <i class="fas fa-trash-alt"></i> Supprimer
                     </a>
                   </div>
                 </div>
@@ -363,4 +363,5 @@
 <script src="../../dist/js/demo.js"></script>
 </body>
 </html>
+
 @endsection

@@ -166,5 +166,23 @@ class HomeController extends Controller
         return view('medpanel.rapport');
 
     }
+    public function editcheifa()
+    {
+
+        return view('adminpanel.editcheifa');
+
+    }
+    public function editmeda()
+    {
+
+        return view('adminpanel.editmeda');
+
+    }
+    public function editnursea()
+    {
+
+        return view('adminpanel.editnursea');
+
+    }
 
 }

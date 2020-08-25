@@ -47,7 +47,7 @@
                 </div>
                 <div class="card-footer">
                   <div class="text-right">
-                    <a href="#" class="btn btn-sm btn-primary">
+                    <a href="/editnursea" class="btn btn-sm btn-primary">
                       <i class="fa fa-edit"></i> Modifier
                     </a>
                     <a href="#" class="btn btn-sm btn-danger">

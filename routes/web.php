@@ -57,6 +57,13 @@ Route::get('/editmedinfos', 'HomeController@editminfos')->name('medpanel.editmin
 Route::get('/editnursepassword', 'HomeController@editmpassword')->name('medpanel.editmpassword');
 Route::get('/editnurseinfos', 'HomeController@editninfos')->name('nursepanel.editninfos');
 
+Route::get('/editcheifa', 'HomeController@editcheifa')->name('adminpanel.editcheifa');
+Route::get('/editmeda', 'HomeController@editmeda')->name('adminpanel.editmeda');
+Route::get('/editnursea', 'HomeController@editnursea')->name('adminpanel.editnursea');
+
+
+
+
 Route::resource('Membre','MembreController');
 
 Route::get('/adminconsultc', 'HomeController@adminconsultchief')->name('adminpanel.consulterchefservicea');
