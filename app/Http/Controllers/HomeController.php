@@ -184,5 +184,25 @@ class HomeController extends Controller
         return view('adminpanel.editnursea');
 
     }
+    public function editnursec()
+    {
+
+        return view('cheifpanel.editnursec');
+
+    }
+    
+    public function editmedc()
+    {
+
+        return view('cheifpanel.editmedc');
+
+    }
+    
+    public function consultservicea()
+    {
+
+        return view('adminpanel.consulterservicea');
+
+    }
 
 }

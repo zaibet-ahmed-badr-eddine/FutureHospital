@@ -72,6 +72,10 @@ Route::get('/adminconsultn', 'HomeController@adminconsultnurse')->name('adminpan
 
 Route::get('/cheifconsultm', 'HomeController@cheifconsultmed')->name('cheifpanel.consultermedcinc');
 Route::get('/cheifconsultn', 'HomeController@cheifconsultnurse')->name('cheifpanel.consulterinfirmierec');
+Route::get('/cheifeditm', 'HomeController@editmedc')->name('cheifpanel.editmedc');
+Route::get('/cheifeditn', 'HomeController@editnursec')->name('cheifpanel.editnursec');
+
+Route::get('/consultservicea', 'HomeController@consultservicea')->name('adminpanel.consulterservicea');
 
 Route::get('/rapport', 'HomeController@rèdigerapport')->name('medpanel.rapport');
 
