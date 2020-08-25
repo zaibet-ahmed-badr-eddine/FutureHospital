@@ -260,13 +260,13 @@
               <li class="nav-item">
              
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
+                <a href="/cheifconsultm" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Medcin</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/inline.html" class="nav-link">
+                <a href="/cheifconsultn" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Infirmiere</p>
                 </a>

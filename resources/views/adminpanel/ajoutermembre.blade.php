@@ -8,8 +8,8 @@
     </div>
     <!-- /.card-header -->
     <!-- form start -->
-    <form method="POST" action="{{ route('register') }}">
-      
+    <form method="POST" action="{{ route('add.user') }}">
+      @csrf
       <div class="card-body">
         
             <div class="form-group">
@@ -33,7 +33,7 @@
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Confirmer mot de passe </label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="mot de passe">
+            <input type="password" class="form-control" id="exampleInputPassword1" name="password2" placeholder="mot de passe">
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">lieu de naissance </label>
@@ -45,22 +45,22 @@
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">num de telephone </label>
-            <input type="phone" class="form-control" id="exampleInputEmail1" name="phonenumber" placeholder="num de telephone">
+            <input type="text" class="form-control" id="exampleInputEmail1" name="phonenumber" placeholder="num de telephone">
           </div>
 
-{{--     
+    
            <div class="form-group">
             <label>poste</label>
-            <select class="form-control">
-              <option>Chef Srvice</option>
-              <option>Medcin</option>
-              <option>Infirmiere</option>
+            <select class="form-control" name="role_id">
+              <option value="2">Chef Srvice</option>
+              <option value="3">Medcin</option>
+              <option value="4">Infirmiere</option>
               
             </select>
           </div>
 
 
-        <div class="form-group">
+        {{-- <div class="form-group">
           <label for="exampleInputFile">File input</label>
           <div class="input-group">
             <div class="custom-file">
@@ -71,7 +71,7 @@
               <span class="input-group-text" id="">Upload</span>
             </div>
           </div>
-        </div>
+        </div> --}}
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Check me out</label>
@@ -79,7 +79,7 @@
       
       </div> 
 
-      <!-- /.card-body --> --}}
+      <!-- /.card-body -->
 
       <div class="card-footer">
         <button type="submit" class="btn btn-primary">Submit</button>

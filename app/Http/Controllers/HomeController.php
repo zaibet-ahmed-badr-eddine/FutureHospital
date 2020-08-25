@@ -26,6 +26,28 @@ class HomeController extends Controller
         return view('adminpanel.adminpanelhome');
     }
 
+    public function adminconsultchief()
+    {
+        return view('adminpanel.consulterchefservicea');
+    }
+    public function adminconsultmed()
+    {
+        return view('adminpanel.consultermedcina');
+    }
+
+    public function adminconsultnurse()
+    {
+        return view('adminpanel.consulterinfirmierea');
+    }
+    public function cheifconsultnurse()
+    {
+        return view('cheifpanel.consulterinfirmierec');
+    }
+    public function cheifconsultmed()
+    {
+        return view('cheifpanel.consultermedcinc');
+    }
+
     public function cheifpanelhome()
     {
         return view('cheifpanel.cheifpanelhome');

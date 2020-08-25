@@ -4,7 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Service extends Model
+class service extends Model
 {
     //
+
+    protected $fillable = [
+        'name_s','name_cs','lit_number', 
+   ];
 }

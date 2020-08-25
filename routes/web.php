@@ -59,6 +59,15 @@ Route::get('/editnurseinfos', 'HomeController@editninfos')->name('nursepanel.edi
 
 Route::resource('Membre','MembreController');
 
+Route::get('/adminconsultc', 'HomeController@adminconsultchief')->name('adminpanel.consulterchefservicea');
+Route::get('/adminconsultm', 'HomeController@adminconsultmed')->name('adminpanel.consultermedcina');
+Route::get('/adminconsultn', 'HomeController@adminconsultnurse')->name('adminpanel.consulterinfirmierea');
+
+Route::get('/cheifconsultm', 'HomeController@cheifconsultmed')->name('cheifpanel.consultermedcinc');
+Route::get('/cheifconsultn', 'HomeController@cheifconsultnurse')->name('cheifpanel.consulterinfirmierec');
 
 
 
+Route::post('loginUser', 'loginController@login')->name('login.user');
+Route::post('addnewmember', 'loginController@addMember')->name('add.user');
+Route::post('addnewmservice', 'servicesController@addService')->name('add.service');
