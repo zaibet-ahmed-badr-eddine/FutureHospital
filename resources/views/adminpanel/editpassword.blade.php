@@ -9,24 +9,24 @@
     </div>
     <!-- /.card-header -->
     <!-- form start -->
-    <form role="form">
-      
+    <form action="{{ route('edit.own.password') }}" method="POST">
+      @csrf
       <div class="card-body">
         
-            <div class="form-group">
-              <label for="exampleInputEmail1">ancien mot de passe</label>
-              <input type="password" class="form-control"  placeholder="ancien mot de passe">
-            </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">ancien mot de passe</label>
+          <input type="password" class="form-control" name="oldpassword"  placeholder="ancien mot de passe">
+        </div>
     
-                <div class="form-group">
-                  <label for="exampleInputEmail1">nouveau mot de passe</label>
-                  <input type="password" class="form-control"  placeholder="nouveau mot de passe">
-                </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">nouveau mot de passe</label>
+          <input type="password" class="form-control" name="password"  placeholder="nouveau mot de passe">
+        </div>
 
 
         <div class="form-group">
           <label for="exampleInputEmail1">confirmer nouveau mot de passe</label>
-          <input type="password" class="form-control" id="exampleInputEmail1" placeholder="confirmer nouveau mot de passe">
+          <input type="password" class="form-control" placeholder="confirmer nouveau mot de passe">
         </div>
         
 

@@ -8,37 +8,37 @@
     </div>
     <!-- /.card-header -->
     <!-- form start -->
-    <form method="POST" action="">
-      
+    <form method="POST" action="{{ route('edit.own.info') }}">
+      @csrf
       <div class="card-body">
         
             <div class="form-group">
               <label for="exampleInputEmail1">Nom</label>
-              <input type="text" class="form-control" name="name" placeholder="Nom">
+              <input type="text" class="form-control" name="name" placeholder="Nom" value="{{ $user->name }}">
             </div>
     
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Prenom</label>
-                  <input type="text" class="form-control" name="pseudoname" placeholder="Prenom">
+                  <label for="exampleInputEmail1">Pseudoname</label>
+                  <input type="text" class="form-control" name="pseudoname" placeholder="Pseudoname" value="{{ $user->pseudoname }}">
                 </div>
 
 
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter email">
+          <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter email" value="{{ $user->email }}">
         </div>
         
           <div class="form-group">
             <label for="exampleInputEmail1">lieu de naissance </label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="bornplace" placeholder="Lieu de naissance">
+            <input type="text" class="form-control" id="exampleInputEmail1" name="bornplace" placeholder="Lieu de naissance" value="{{ $user->bornplace }}">
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">date de naissance </label>
-            <input type="date" class="form-control" id="exampleInputEmail1" name="birthday" placeholder="date de naissance">
+            <input type="date" class="form-control" id="exampleInputEmail1" name="birthday" placeholder="date de naissance" value="{{ $user->birthday }}">
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">num de telephone </label>
-            <input type="phone" class="form-control" id="exampleInputEmail1" name="phonenumber" placeholder="num de telephone">
+            <input type="phone" class="form-control" id="exampleInputEmail1" name="phonenumber" placeholder="num de telephone" value="{{ $user->phonenumber }}">
           </div>
 
 {{--     
@@ -52,19 +52,6 @@
             </select>
           </div>--}}
 
-
-        <div class="form-group">
-          <label for="exampleInputFile">File input</label>
-          <div class="input-group">
-            <div class="custom-file">
-              <input type="file" class="custom-file-input" id="exampleInputFile">
-              <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-            </div>
-            <div class="input-group-append">
-              <span class="input-group-text" id="">Upload</span>
-            </div>
-          </div>
-        </div>
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Check me out</label>

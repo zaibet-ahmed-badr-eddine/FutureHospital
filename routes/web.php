@@ -66,10 +66,6 @@ Route::get('/editnursea', 'HomeController@editnursea')->name('adminpanel.editnur
 
 Route::resource('Membre','MembreController');
 
-Route::get('/adminconsultc', 'HomeController@adminconsultchief')->name('adminpanel.consulterchefservicea');
-Route::get('/adminconsultm', 'HomeController@adminconsultmed')->name('adminpanel.consultermedcina');
-Route::get('/adminconsultn', 'HomeController@adminconsultnurse')->name('adminpanel.consulterinfirmierea');
-
 Route::get('/cheifconsultm', 'HomeController@cheifconsultmed')->name('cheifpanel.consultermedcinc');
 Route::get('/cheifconsultn', 'HomeController@cheifconsultnurse')->name('cheifpanel.consulterinfirmierec');
 Route::get('/cheifeditm', 'HomeController@editmedc')->name('cheifpanel.editmedc');
@@ -83,3 +79,11 @@ Route::get('/rapport', 'HomeController@rèdigerapport')->name('medpanel.rapport'
 Route::post('loginUser', 'loginController@login')->name('login.user');
 Route::post('addnewmember', 'userController@addMember')->name('add.user');
 Route::post('addnewmservice', 'servicesController@addService')->name('add.service');
+
+//admin functions
+Route::get('consulte-user/{id}', 'userController@showMembers')->name('show.members');
+Route::get('delete-user/{id}/{role_id}', 'userController@deleteMember')->name('delete.member');
+Route::get('show-edit/{id}', 'userController@editMember')->name('show.edit.form');
+Route::post('edit-user/{id}', 'userController@updateMember')->name('edit.member');
+Route::post('edit-own', 'userController@modifyOwnInfo')->name('edit.own.info');
+Route::post('edit-own-password', 'userController@modifypassword')->name('edit.own.password');
