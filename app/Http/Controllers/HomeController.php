@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -116,8 +117,8 @@ class HomeController extends Controller
     }
     public function editmyinfos()
     {
-
-        return view('adminpanel.editmyinfos');
+        $user = Auth::user();
+        return view('adminpanel.editmyinfos', ['user'=> $user]);
 
     }
     public function editcpassword()

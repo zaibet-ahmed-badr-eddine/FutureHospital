@@ -253,19 +253,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/adminconsultc" class="nav-link">
+                <a href="{{ route('show.members', ['id'=> 2]) }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Chef Service</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/adminconsultm" class="nav-link">
+                <a href="{{ route('show.members', ['id'=> 3]) }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Medcin</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/adminconsultn" class="nav-link">
+                <a href="{{ route('show.members', ['id'=> 4]) }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Infirmiere</p>
                 </a>
