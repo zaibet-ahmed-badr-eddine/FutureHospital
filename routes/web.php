@@ -66,8 +66,9 @@ Route::get('/adminconsultn', 'HomeController@adminconsultnurse')->name('adminpan
 Route::get('/cheifconsultm', 'HomeController@cheifconsultmed')->name('cheifpanel.consultermedcinc');
 Route::get('/cheifconsultn', 'HomeController@cheifconsultnurse')->name('cheifpanel.consulterinfirmierec');
 
+Route::get('/rapport', 'HomeController@rèdigerapport')->name('medpanel.rapport');
 
 
 Route::post('loginUser', 'loginController@login')->name('login.user');
-Route::post('addnewmember', 'loginController@addMember')->name('add.user');
+Route::post('addnewmember', 'userController@addMember')->name('add.user');
 Route::post('addnewmservice', 'servicesController@addService')->name('add.service');

@@ -151,7 +151,7 @@ class HomeController extends Controller
     public function editnpassword()
     {
 
-        return view('mnursepanel.editnpassword');
+        return view('nursepanel.editnpassword');
 
     }
     public function editninfos()
@@ -160,4 +160,11 @@ class HomeController extends Controller
         return view('nursepanel.editninfos');
 
     }
+    public function rèdigerapport()
+    {
+
+        return view('medpanel.rapport');
+
+    }
+
 }

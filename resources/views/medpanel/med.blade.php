@@ -24,6 +24,8 @@
   <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css') }}">
   <!-- summernote -->
   <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.css') }}">
+ 
+
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
@@ -249,7 +251,7 @@
 
 
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="rapport" class="nav-link">
               <i class="fas fa-circle nav-icon"></i>
               <p>
                 rèdiger raport
@@ -433,6 +435,7 @@
 <script src="{{ asset('plugins/jqvmap/jquery.vmap.min.js') }}"></script>
 <!-- Summernote -->
 <script src="{{ asset('plugins/jqvmap/jquery.vmap.min.js') }}"></script>
+
 <!-- overlayScrollbars -->
 <script src="{{ asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
 <!-- AdminLTE App -->
@@ -441,6 +444,7 @@
 <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('dist/js/demo.js') }}"></script>
+
 
 
 

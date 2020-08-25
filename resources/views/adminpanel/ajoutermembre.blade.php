@@ -52,7 +52,7 @@
            <div class="form-group">
             <label>poste</label>
             <select class="form-control" name="role_id">
-              <option value="2">Chef Srvice</option>
+              <option value="2">Chef Service</option>
               <option value="3">Medcin</option>
               <option value="4">Infirmiere</option>
               
