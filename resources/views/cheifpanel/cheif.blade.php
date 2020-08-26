@@ -260,13 +260,13 @@
               <li class="nav-item">
              
               <li class="nav-item">
-                <a href="/cheifconsultm" class="nav-link">
+                <a href="{{ route('show.members', ['id'=> 3]) }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Medcin</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/cheifconsultn" class="nav-link">
+                <a href="{{ route('show.members', ['id'=> 4]) }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Infirmiere</p>
                 </a>

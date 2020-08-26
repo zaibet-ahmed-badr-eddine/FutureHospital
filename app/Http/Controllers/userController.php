@@ -35,22 +35,44 @@ class userController extends Controller
 
     // show users depending on their roles
     public function showMembers($id){
+      
         $users = User::where('role_id', '=', $id)->get();
-        return view('adminpanel.consulteUser', ['users'=> $users, "role_id"=>$id]);
+        if(Auth::user()->role->role === 'admin'){
+        return view('adminpanel.consulteUser', ['users'=> $users, "role_id"=>$id]);}
+        if(Auth::user()->role->role === 'chef_service'){
+           
+            return view('cheifpanel.consulteuserc', ['users'=> $users, "role_id"=>$id]);
+        }
+
     }
 
     // delte user 
     public function deleteMember($id, $role_id){
+
+       
         $user = User::find($id);
         $user->delete();
         $users = User::where('role_id', '=', $role_id)->get();
+        if(Auth::user()->role->role === 'admin'){
         return view('adminpanel.consulteUser', ['users'=> $users, "role_id"=>$role_id]);
+        }
+        if(Auth::user()->role->role === 'chef_service'){
+    
+        return view('cheifpanel.consulteuserc', ['users'=> $users, "role_id"=>$role_id]);
+        }
     }
 
     // show modify form
     public function editMember($id){
+        
         $user = User::find($id);
+        if(Auth::user()->role->role === 'admin'){
         return view('adminpanel.editcheifa', ['user'=> $user]);
+    }
+        if(Auth::user()->role->role === 'chef_service'){
+        return view('cheifpanel.editmedc', ['user'=> $user]);
+    }
+        
     }
 
     // modify member informations
@@ -63,7 +85,14 @@ class userController extends Controller
         $user->birthday = $request->birthday;
         $user->phonenumber = $request->phonenumber;
         $user->update();
-        return view('adminpanel.editcheifa', ['user'=> $user]);
+       
+
+        if(Auth::user()->role->role === 'admin'){
+            return view('adminpanel.editcheifa', ['user'=> $user]);
+        }
+            if(Auth::user()->role->role === 'chef_service'){
+            return view('cheifpanel.editmedc', ['user'=> $user]);
+        }
     }
 
     // modifier les info function
@@ -76,7 +105,19 @@ class userController extends Controller
         $user->birthday = $request->birthday;
         $user->phonenumber = $request->phonenumber;
         $user->update();
+        
+        if(Auth::user()->role->role === 'admin'){
         return view('adminpanel.editmyinfos', ['user'=> $user]);
+        }
+        if(Auth::user()->role->role === 'chef_service'){
+            return view('cheifpanel.editcinfos', ['user'=> $user]);
+        }
+        if(Auth::user()->role->role === 'medcin'){
+            return view('medpanel.editminfos', ['user'=> $user]);
+        }
+        if(Auth::user()->role->role === 'infirmiere'){
+            return view('nursepanel.editninfos', ['user'=> $user]);
+        }
     }
 
     // change own password
@@ -87,7 +128,20 @@ class userController extends Controller
             $user->update();
         }
 
-        return view('adminpanel.adminpanelhome');
+       
+
+        if(Auth::user()->role->role === 'admin'){
+            return view('adminpanel.adminpanelhome');
+            }
+            if(Auth::user()->role->role === 'chef_service'){
+                return view('cheifpanel.cheifpanelhome');
+            }
+            if(Auth::user()->role->role === 'medcin'){
+                return view('medpanel.medpanelhome');
+            }
+            if(Auth::user()->role->role === 'infirmiere'){
+                return view('nursepanel.nursepanelhome');
+            }
     }
 
 }
