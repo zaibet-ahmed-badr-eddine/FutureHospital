@@ -225,13 +225,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="addservice" class="nav-link">
+                <a href="/addservice" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ajouter Service</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="addmembre" class="nav-link">
+                <a href="/addmembre" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ajouter Membre</p>
                 </a>

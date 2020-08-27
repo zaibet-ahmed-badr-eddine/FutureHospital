@@ -216,7 +216,7 @@
       
           
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="{{route('show.member')}}" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Gestion patient
@@ -233,7 +233,7 @@
 
 
         <li class="nav-item has-treeview">
-            <a href="caddmembre" class="nav-link">
+            <a href="/caddmembre" class="nav-link">
               <i class="fas fa-circle nav-icon"></i>
               <p>
                 Ajouter membre
@@ -350,13 +350,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="editcheifinfos" class="nav-link">
+              <a href="/editadmininfos" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Modifier mes Infos</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="editcheifpassword" class="nav-link">
+                <a href="/editcheifpassword" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Modifier Mot de Passe</p>
                 </a>

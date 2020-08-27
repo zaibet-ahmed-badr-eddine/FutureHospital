@@ -107,16 +107,20 @@ class userController extends Controller
         $user->update();
         
         if(Auth::user()->role->role === 'admin'){
+
         return view('adminpanel.editmyinfos', ['user'=> $user]);
         }
+        
         if(Auth::user()->role->role === 'chef_service'){
-            return view('cheifpanel.editcinfos', ['user'=> $user]);
+         
+            return view('cheifpanel.editmyinfos', ['user'=> $user]);
         }
         if(Auth::user()->role->role === 'medcin'){
-            return view('medpanel.editminfos', ['user'=> $user]);
+            
+            return view('medpanel.editmyinfos', ['user'=> $user]);
         }
         if(Auth::user()->role->role === 'infirmiere'){
-            return view('nursepanel.editninfos', ['user'=> $user]);
+            return view('nursepanel.editmyinfos', ['user'=> $user]);
         }
     }
 

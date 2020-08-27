@@ -118,9 +118,30 @@ class HomeController extends Controller
     public function editmyinfos()
     {
         $user = Auth::user();
-        return view('adminpanel.editmyinfos', ['user'=> $user]);
 
-    }
+        if(Auth::user()->role->role === 'admin'){
+
+            return view('adminpanel.editmyinfos', ['user'=> $user]);
+            }
+            
+            if(Auth::user()->role->role === 'chef_service'){
+             
+                return view('cheifpanel.editmyinfos', ['user'=> $user]);
+            }
+            if(Auth::user()->role->role === 'medcin'){
+                
+                return view('medpanel.editmyinfos', ['user'=> $user]);
+            }
+            if(Auth::user()->role->role === 'infirmiere'){
+                return view('nursepanel.editmyinfos', ['user'=> $user]);
+            }
+        }
+
+
+
+        
+
+    
     public function editcpassword()
     {
 

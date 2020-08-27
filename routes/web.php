@@ -51,11 +51,10 @@ Route::get('/addservice', 'HomeController@ajouterServices')->name('adminpanel.aj
 Route::get('/editadminpassword', 'HomeController@editpassword')->name('adminpanel.editpassword');
 Route::get('/editadmininfos', 'HomeController@editmyinfos')->name('adminpanel.editmyinfos');
 Route::get('/editcheifpassword', 'HomeController@editcpassword')->name('cheifpanel.editcpassword');
-Route::get('/editcheifinfos', 'HomeController@editcinfos')->name('cheifpanel.editcinfos');
+
 Route::get('/editmedpassword', 'HomeController@editmpassword')->name('medpanel.editmpassword');
-Route::get('/editmedinfos', 'HomeController@editminfos')->name('medpanel.editminfos');
 Route::get('/editnursepassword', 'HomeController@editmpassword')->name('medpanel.editmpassword');
-Route::get('/editnurseinfos', 'HomeController@editninfos')->name('nursepanel.editninfos');
+
 
 Route::get('/editcheifa', 'HomeController@editcheifa')->name('adminpanel.editcheifa');
 Route::get('/editmeda', 'HomeController@editmeda')->name('adminpanel.editmeda');
@@ -81,6 +80,7 @@ Route::post('addnewmember', 'userController@addMember')->name('add.user');
 Route::post('addnewmservice', 'servicesController@addService')->name('add.service');
 
 //admin functions
+Route::get('consulte-patient', 'patientController@showMembers')->name('show.member');
 Route::get('consulte-user/{id}', 'userController@showMembers')->name('show.members');
 Route::get('delete-user/{id}/{role_id}', 'userController@deleteMember')->name('delete.member');
 Route::get('show-edit/{id}', 'userController@editMember')->name('show.edit.form');

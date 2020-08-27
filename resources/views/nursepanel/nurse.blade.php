@@ -301,7 +301,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="editnurseinfos" class="nav-link">
+                <a href="/editadmininfos" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Modifier mes Infos</p>
                 </a>
