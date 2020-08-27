@@ -44,7 +44,7 @@
             <div class="banner-text text-center">
               <h1 class="white">Healthcare at your desk!!</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="#contact" class="btn btn-appoint">Make an Appointment.</a>
+              <a href="#contact" class="btn btn-appoint">Prenez Rendez-vous</a>
             </div>
             <div class="overlay-detail text-center">
               <a href="#service"><i class="fa fa-angle-down"></i></a>
@@ -348,21 +348,75 @@
             <div id="errormessage"></div>
             <form action="" method="post" role="form" class="contactForm">
               <div class="form-group">
-                <input type="text" name="name" class="form-control br-radius-zero" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <input type="text" name="name" class="form-control br-radius-zero" id="name" placeholder="Nom" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control br-radius-zero" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <input type="text" name="pseudoname" class="form-control br-radius-zero" id="pseudoname" placeholder="Prenom" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control br-radius-zero" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <select class="form-control br-radius-zero" style="width: 100%;">
+                  <option selected="selected">male</option>
+                  <option >female</option></select>
+
+                  <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control br-radius-zero" name="email" id="email" placeholder=" Email" data-rule="email" data-msg="Please enter a valid email" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control br-radius-zero" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <input type="text" class="form-control br-radius-zero" name="phonenumber" id="phonenumber" placeholder=" phonenumber" data-rule="email" data-msg="Please enter a valid email" />
                 <div class="validation"></div>
               </div>
+              <div class="form-group">
+                <input type="date" class="form-control br-radius-zero" name="birthday" id="birthday" placeholder="date de naissance" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control br-radius-zero" name="birthplace" id="birthplace" placeholder="lieu de naissance" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control br-radius-zero" name="addresse" id="addresse" placeholder="addresse" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+              
+
+              <div class="form-group">
+
+
+
+                <select class="form-control br-radius-zero" style="width: 100%;">            
+                  <option selected="selected">cardio</option>
+                  <option >neuro</option>
+                  <option >pneumo</option>
+                  <option >radio</option></select>
+
+                <div class="validation"></div>
+              </div>
+
+
+
+              <div class="form-group">
+
+
+                
+                 
+                  <div class="input-group">
+                    <div class="custom-file">
+                      <input type="file" class="form-control br-radius-zero" id="exampleInputFile">
+                     
+                    </div>
+                   
+                   
+                  </div>
+                
+                <div class="validation"></div>
+              </div>
+            
+              
 
               <div class="form-action">
                 <button type="submit" class="btn btn-form">Send Message</button>
