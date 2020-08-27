@@ -88,3 +88,5 @@ Route::post('edit-user/{id}', 'userController@updateMember')->name('edit.member'
 Route::post('edit-own', 'userController@modifyOwnInfo')->name('edit.own.info');
 Route::post('edit-own-password', 'userController@modifypassword')->name('edit.own.password');
 Route::get('delete-service/{id}', 'ServiceController@deleteService')->name('delete.service');
+Route::get('edit-service/{id}', 'ServiceController@edit')->name('show.edit.service'); 
+Route::post('update-service/{id}', 'ServiceController@modifyservice')->name('update.service');
