@@ -75,7 +75,7 @@ Route::get('/consultservicea', 'HomeController@consultservicea')->name('adminpan
 Route::get('/rapport', 'HomeController@rèdigerapport')->name('medpanel.rapport');
 
 
-Route::post('loginUser', 'loginController@login')->name('login.user');
+Route::post('loginUser', 'LoginController@login')->name('login.user');
 Route::post('addnewmember', 'userController@addMember')->name('add.user');
 Route::post('addnewmservice', 'servicesController@addService')->name('add.service');
 
@@ -87,3 +87,4 @@ Route::get('show-edit/{id}', 'userController@editMember')->name('show.edit.form'
 Route::post('edit-user/{id}', 'userController@updateMember')->name('edit.member');
 Route::post('edit-own', 'userController@modifyOwnInfo')->name('edit.own.info');
 Route::post('edit-own-password', 'userController@modifypassword')->name('edit.own.password');
+Route::get('delete-service/{id}', 'ServiceController@deleteService')->name('delete.service');

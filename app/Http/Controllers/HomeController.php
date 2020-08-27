@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\Service;
 
 class HomeController extends Controller
 {
@@ -222,8 +223,8 @@ class HomeController extends Controller
     
     public function consultservicea()
     {
-
-        return view('adminpanel.consulterservicea');
+        $services = Service::all();
+        return view('adminpanel.consulterservicea', ['services'=> $services]);
 
     }
 
