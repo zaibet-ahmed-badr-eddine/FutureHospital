@@ -83,7 +83,7 @@ Route::post('addnewmservice', 'ServiceController@addservice')->name('add.service
 
 //nurse functions
 Route::get('/editnursepassword', 'HomeController@editmpassword')->name('medpanel.editmpassword');
-Route::get('/gestionrdv', 'HomeController@gestionRdv')->name('nursepanel.gestionrdv');
+Route::get('/gestionrdv/{id}', 'HomeController@gestionRdv')->name('nursepanel.gestionrdv');
 
 
 

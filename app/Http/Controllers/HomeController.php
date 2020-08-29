@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Service;
+use App\Rdv;
 
 class HomeController extends Controller
 {
@@ -160,10 +161,11 @@ class HomeController extends Controller
 
     }
 
-    public function gestionRdv()
+    public function gestionRdv($id)
     {
-
-        return view('nursepanel.gestionrdv');
+        $rdvs = Rdv::all();
+        $rdvt = Rdv::find($id);
+        return view('nursepanel.gestionrdv', ['rdvs'=> $rdvs, 'rdvt'=> $rdvt]);
 
     }
     public function consultRdv()

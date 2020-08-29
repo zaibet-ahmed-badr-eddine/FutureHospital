@@ -227,7 +227,7 @@
 
 
           <li class="nav-item has-treeview">
-            <a href="/gestionrdv" class="nav-link">
+            <a href="/gestionrdv/1" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                Gestion RDV
