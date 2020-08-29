@@ -223,7 +223,18 @@
                 
               </p>
             </a>
-        </li>
+         </li>
+
+
+          <li class="nav-item has-treeview">
+            <a href="/gestionrdv" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+               Gestion RDV
+                
+              </p>
+            </a>
+         </li>
 
 
 
@@ -301,7 +312,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/editadmininfos" class="nav-link">
+                <a href="/editmyinfos" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Modifier mes Infos</p>
                 </a>

@@ -7,6 +7,11 @@ use App\Service;
 
 class ServiceController extends Controller
 {
+
+
+ 
+
+
     // delete a service
     public function deleteService($id){
         $service = Service::find($id);
@@ -34,8 +39,8 @@ class ServiceController extends Controller
     }
 
     // ajouter un service
-    public function addservice(Request $request, $id){
-        $service = Service::find($id);
+    public function addservice(Request $request){
+        $service = new Service();
         $service->name_s = $request->name_s;
         $service->name_cs = $request->name_cs;
         $service->lit_number = $request->lit_number;

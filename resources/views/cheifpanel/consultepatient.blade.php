@@ -26,7 +26,7 @@
       <div class="card card-solid">
         <div class="card-body pb-0">
           <div class="row d-flex align-items-stretch">
-            {{-- @foreach ($patients as $patient) --}}
+         @foreach ($patients as $patient) 
               <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
                 <div class="card bg-light">
                   <div class="card-header text-muted border-bottom-0">
@@ -59,7 +59,7 @@
                   </div>
                 </div>
               </div>
-            {{-- @endforeach --}}
+            @endforeach
           </div>
         </div>
         <!-- /.card-body -->

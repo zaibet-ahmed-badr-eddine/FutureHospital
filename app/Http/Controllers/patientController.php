@@ -3,24 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\patient;
+use App\Patient;
 
-
-class patientController extends Controller
+class PatientController extends Controller
 {
     //
 
-    public function showMembers(){
-      
-        $patients = patient::all();
-      
-        return view('cheifpanel.consultepatient', ['patient'=> $patients]);}
-        
-
+    public function showPatient(){
+        $patients=Patient::all();
+        return view("cheifpanel.consultepatient",["patients"=>$patients]);
     }
-
-
-
-
-
-
+}

@@ -28,28 +28,6 @@ class HomeController extends Controller
         return view('adminpanel.adminpanelhome');
     }
 
-    public function adminconsultchief()
-    {
-        return view('adminpanel.consulterchefservicea');
-    }
-    public function adminconsultmed()
-    {
-        return view('adminpanel.consultermedcina');
-    }
-
-    public function adminconsultnurse()
-    {
-        return view('adminpanel.consulterinfirmierea');
-    }
-    public function cheifconsultnurse()
-    {
-        return view('cheifpanel.consulterinfirmierec');
-    }
-    public function cheifconsultmed()
-    {
-        return view('cheifpanel.consultermedcinc');
-    }
-
     public function cheifpanelhome()
     {
         return view('cheifpanel.cheifpanelhome');
@@ -149,12 +127,7 @@ class HomeController extends Controller
         return view('cheifpanel.editcpassword');
 
     }
-    public function editcinfos()
-    {
 
-        return view('cheifpanel.editcinfos');
-
-    }
 
 
     public function editmpassword()
@@ -162,13 +135,7 @@ class HomeController extends Controller
 
         return view('medpanel.editmpassword');
 
-    }
-    public function editminfos()
-    {
-
-        return view('medpanel.editminfos');
-
-    }
+    } 
 
 
     public function editnpassword()
@@ -177,54 +144,26 @@ class HomeController extends Controller
         return view('nursepanel.editnpassword');
 
     }
-    public function editninfos()
-    {
-
-        return view('nursepanel.editninfos');
-
-    }
     public function rèdigerapport()
     {
 
         return view('medpanel.rapport');
 
     }
-    public function editcheifa()
-    {
 
-        return view('adminpanel.editcheifa');
-
-    }
-    public function editmeda()
-    {
-
-        return view('adminpanel.editmeda');
-
-    }
-    public function editnursea()
-    {
-
-        return view('adminpanel.editnursea');
-
-    }
-    public function editnursec()
-    {
-
-        return view('cheifpanel.editnursec');
-
-    }
-    
-    public function editmedc()
-    {
-
-        return view('cheifpanel.editmedc');
-
-    }
+  
     
     public function consultservicea()
     {
         $services = Service::all();
         return view('adminpanel.consulterservicea', ['services'=> $services]);
+
+    }
+
+    public function gestionRdv()
+    {
+
+        return view('nursepanel.gestionrdv');
 
     }
 
