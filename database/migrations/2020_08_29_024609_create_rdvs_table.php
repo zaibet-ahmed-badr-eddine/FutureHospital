@@ -22,11 +22,10 @@ class CreateRdvsTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('bornplace');
             $table->date('birthday');
-            $table->string('gender');
-            $table->string('address');
+            $table->string('adress');
             $table->string('phonenumber');
-            $table->string('service');
-            $table->string('medcin');
+            $table->string('service')->default('null');
+            $table->string('medcin')->default('null');
             $table->date('rdv_date');
 
             $table->timestamps();
