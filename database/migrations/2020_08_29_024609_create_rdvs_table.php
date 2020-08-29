@@ -28,6 +28,8 @@ class CreateRdvsTable extends Migration
             $table->string('service');
             $table->string('medcin');
             $table->date('rdv_date');
+            $table->string('upload_file');
+
 
             $table->timestamps();
         });
