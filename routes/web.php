@@ -91,6 +91,7 @@ Route::get('/gestionrdv', 'HomeController@gestionRdv')->name('nursepanel.gestion
 //med Fuctions
 Route::get('/rapport', 'HomeController@rèdigerapport')->name('medpanel.rapport');
 Route::get('/editmedpassword', 'HomeController@editmpassword')->name('medpanel.editmpassword');
+Route::get('/consultrdv', 'HomeController@consultRdv')->name('medpanel.consulteRdv');
 
 
 

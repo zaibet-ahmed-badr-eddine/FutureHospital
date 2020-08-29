@@ -27,7 +27,7 @@ class LoginController extends Controller
                     return redirect('/meddashboard');
                 }
 
-                if(Auth::user()->role->role === 'infirmiere'){
+                if(Auth::user()->role->role === 'infermiere'){
                     return redirect('/nursedashboard');
                 }
 

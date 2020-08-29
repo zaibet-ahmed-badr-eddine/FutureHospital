@@ -166,5 +166,11 @@ class HomeController extends Controller
         return view('nursepanel.gestionrdv');
 
     }
+    public function consultRdv()
+    {
+
+        return view('medpanel.consulteRdv');
+
+    }
 
 }
