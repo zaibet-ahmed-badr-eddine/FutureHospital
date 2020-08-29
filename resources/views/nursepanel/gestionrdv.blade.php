@@ -34,52 +34,20 @@
               <thead>                  
                 <tr>
                   <th style="width: 80px" >N° RDV</th>
-                  <th>Nom & Prenom    </th>
-                  <th>Genre</th>
+                  <th>Pseudoname</th>
+                  <th>Email</th>
                   <th style="width: 40px"></th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1.</td>
-                  <td>Update software</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-danger" style="width: 80%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-danger">55%</span></td>
-                </tr>
-                <tr>
-                  <td>2.</td>
-                  <td>Clean database</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar bg-warning" style="width: 70%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-warning">70%</span></td>
-                </tr>
-                <tr>
-                  <td>3.</td>
-                  <td>Cron job running</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar bg-primary" style="width: 30%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-primary">30%</span></td>
-                </tr>
-                <tr>
-                  <td>4.</td>
-                  <td>Fix and squish bugs</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar bg-success" style="width: 90%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-success">90%</span></td>
-                </tr>
+                @foreach ($rdvs as $rdv)
+                  <tr>
+                    <td>{{ $rdv->id }}</td>
+                    <td>{{ $rdv->pseudoname }}</td>
+                    <td>{{ $rdv->email }}</td>
+                    <td><a href="/gestionrdv/{{$rdv->id}}" class="btn btn-info">&gt;</a></td>
+                  </tr>
+                @endforeach
               </tbody>
             </table>
           </div>
@@ -115,79 +83,43 @@
                 <tr>
  
                   <td>Nom</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                    </div>
-                  </td>
+                  <td>{{ $rdvt->name }}</td>
                  
                 </tr>
                 <tr>
                   
-                  <td>Prènom</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar bg-warning" style="width: 70%"></div>
-                    </div>
-                  </td>
+                  <td>Pseudoname</td>
+                  <td>{{ $rdvt->pseudoname }}</td>
                  
                 </tr>
                 <tr>
                   
                   <td>Genre</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar bg-primary" style="width: 30%"></div>
-                    </div>
-                  </td>
+                  <td> / </td>
                 </tr>
                 <tr>
                   <td>Email</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar bg-primary" style="width: 30%"></div>
-                    </div>
-                  </td>
+                  <td>{{ $rdvt->email }}</td>
                 </tr>
                 <tr>
                   <td>Num de tlf</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar bg-primary" style="width: 30%"></div>
-                    </div>
-                  </td>
+                  <td>{{ $rdvt->phonenumber }}</td>
                 </tr>
                 <tr>
                   <td>Date de naissance</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar bg-primary" style="width: 30%"></div>
-                    </div>
-                  </td>
+                  <td>{{ $rdvt->birthday }}</td>
                 </tr>
                 <tr>
                   <td>Lieu de naissance</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar bg-primary" style="width: 30%"></div>
-                    </div>
-                  </td>
+                  <td>{{ $rdvt->bornplace }}</td>
                 </tr>
                 <tr>
                   <td>Adresse</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar bg-primary" style="width: 30%"></div>
-                    </div>
-                  </td>
+                  <td>{{ $rdvt->adress }}</td>
                 </tr>
                 <tr>
                   <td>Service</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar bg-primary" style="width: 30%"></div>
-                    </div>
-                  </td>
+                  <td>/</td>
                 </tr>
                 <tr>
                 <tr>
