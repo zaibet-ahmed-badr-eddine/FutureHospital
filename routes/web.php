@@ -83,7 +83,8 @@ Route::post('addnewmservice', 'ServiceController@addservice')->name('add.service
 
 //nurse functions
 Route::get('/editnursepassword', 'HomeController@editmpassword')->name('medpanel.editmpassword');
-Route::get('/gestionrdv/{id}', 'HomeController@gestionRdv')->name('nursepanel.gestionrdv');
+Route::get('/gestionrdv/{id}', 'RdvController@gestionRdv')->name('nursepanel.gestionrdv');
+Route::post('/gestionrdv/{id}', 'RdvController@addMed')->name('add.med');
 
 
 
@@ -91,7 +92,7 @@ Route::get('/gestionrdv/{id}', 'HomeController@gestionRdv')->name('nursepanel.ge
 //med Fuctions
 Route::get('/rapport', 'HomeController@rèdigerapport')->name('medpanel.rapport');
 Route::get('/editmedpassword', 'HomeController@editmpassword')->name('medpanel.editmpassword');
-Route::get('/consultrdv', 'HomeController@consultRdv')->name('medpanel.consulteRdv');
+Route::get('/consultrdv/{id}', 'RdvController@consultRdv')->name('medpanel.consulteRdv');
 
 
 

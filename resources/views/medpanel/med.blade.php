@@ -218,7 +218,7 @@
       
           
           <li class="nav-item has-treeview">
-            <a href="/consultrdv" class="nav-link">
+            <a href="/consultrdv/1" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Consulter RDV

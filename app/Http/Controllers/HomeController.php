@@ -161,18 +161,6 @@ class HomeController extends Controller
 
     }
 
-    public function gestionRdv($id)
-    {
-        $rdvs = Rdv::all();
-        $rdvt = Rdv::find($id);
-        return view('nursepanel.gestionrdv', ['rdvs'=> $rdvs, 'rdvt'=> $rdvt]);
-
-    }
-    public function consultRdv()
-    {
-
-        return view('medpanel.consulteRdv');
-
-    }
+    
 
 }

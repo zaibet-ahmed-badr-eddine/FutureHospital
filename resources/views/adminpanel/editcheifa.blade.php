@@ -54,7 +54,7 @@
       <!-- /.card-body --> 
 
       <div class="card-footer">
-        <button type="submit" class="btn btn-primary">confirmer</button>
+        <button type="submit" class="btn btn-outline-primary">confirmer</button>
       </div>
     </form>
   </div>

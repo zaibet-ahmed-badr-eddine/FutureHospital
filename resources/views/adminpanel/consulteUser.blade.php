@@ -59,10 +59,10 @@
                   </div>
                   <div class="card-footer">
                     <div class="text-right">
-                      <a href="{{ route('show.edit.form', ['id'=> $user->id]) }}" class="btn btn-sm btn-primary">
+                      <a href="{{ route('show.edit.form', ['id'=> $user->id]) }}" class="btn btn-sm btn-outline-primary">
                         <i class="fa fa-edit"></i> Modifier
                       </a>
-                      <a href="{{ route('delete.member', ['id'=> $user->id, 'role_id'=> $role_id]) }}" class="btn btn-sm btn-danger">
+                      <a href="{{ route('delete.member', ['id'=> $user->id, 'role_id'=> $role_id]) }}" class="btn btn-sm btn-outline-danger">
                         <i class="fas fa-trash-alt"></i> Supprimer
                       </a>
                     </div>

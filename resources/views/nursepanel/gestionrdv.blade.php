@@ -7,12 +7,12 @@
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h1>Simple Tables</h1>
+        <h1>Tables Des Rendez-Vous</h1>
       </div>
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active">Simple Tables</li>
+          <li class="breadcrumb-item"><a href="/indexx">Home</a></li>
+          <li class="breadcrumb-item active">Rendez-Vous</li>
         </ol>
       </div>
     </div>
@@ -34,8 +34,8 @@
               <thead>                  
                 <tr>
                   <th style="width: 80px" >N° RDV</th>
-                  <th>Pseudoname</th>
-                  <th>Email</th>
+                  <th>Nom & Prènom</th>
+                  <th>Genre</th>
                   <th style="width: 40px"></th>
                 </tr>
               </thead>
@@ -43,9 +43,9 @@
                 @foreach ($rdvs as $rdv)
                   <tr>
                     <td>{{ $rdv->id }}</td>
-                    <td>{{ $rdv->pseudoname }}</td>
-                    <td>{{ $rdv->email }}</td>
-                    <td><a href="/gestionrdv/{{$rdv->id}}" class="btn btn-info">&gt;</a></td>
+                    <td>{{ $rdv->pseudoname }} {{ $rdv->name }}</td>
+                    <td>{{ $rdv->gender }}</td>
+                    <td><a href="/gestionrdv/{{$rdv->id}}" class="btn btn-outline-info"><i class="fas fa-play"></i></a></td>
                   </tr>
                 @endforeach
               </tbody>
@@ -75,7 +75,7 @@
                 
                   <th style="width: 200px">Rendez-vous numero </th>
 
-                  <th> </th>{{-- hna oktob num du rendez vous--}}
+                  <th>{{ $rdvt->id }} </th>
                   
                 </tr>
               </thead>
@@ -95,7 +95,7 @@
                 <tr>
                   
                   <td>Genre</td>
-                  <td> / </td>
+                  <td> {{ $rdvt->gender }} </td>
                 </tr>
                 <tr>
                   <td>Email</td>
@@ -119,7 +119,7 @@
                 </tr>
                 <tr>
                   <td>Service</td>
-                  <td>/</td>
+                  <td>{{ $rdvt->service }}</td>
                 </tr>
                 <tr>
                 <tr>
@@ -144,16 +144,17 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <form class="form-horizontal">
+          <form class="form-horizontal" method="POST" action="{{ route('add.med', [$rdvt->id]) }}">
+           @csrf
             <div class="card-body">
               <div class="form-group row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">choisi un medcin</label>
                 <div class="col-sm-10">
-                  <select class="form-control" >            
-                    <option selected="selected">medcin 5</option>
-                    <option >medcin 2</option>
-                    <option >medcin 3</option>
-                    <option >medcin 4</option></select>
+                  <select class="form-control" name="medcin">            
+                    <option selected="selected" value="medcin5">medcin 5</option>
+                    <option value="medcin2" >medcin 2</option>
+                    <option value="medcin3" >medcin 3</option>
+                    <option value="medcin4" >medcin 4</option></select>
                  
                 </div>
               </div>
@@ -162,7 +163,7 @@
                 
                 <label class="col-sm-2 col-form-label" for="exampleCheck2">Date du RDV</label>
                 <div class="col-sm-10">
-                    <input type="date" class="form-control" id="exampleCheck2">
+                    <input type="date" class="form-control" id="exampleCheck2" name="rdv_date">
                   </div>
                 </div>
               </div>
@@ -177,8 +178,8 @@
                 </div>
               </div>
               <div class="card-footer">
-                <button type="submit" class="btn btn-info">Ajouter</button>
-                <button type="submit" class="btn btn-danger float-right">Supprimer</button>
+                <button type="submit" class="btn btn-outline-info">Ajouter</button>
+                <button type="submit" class="btn btn-outline-danger float-right">Supprimer</button>
               </div>
             </div>
         

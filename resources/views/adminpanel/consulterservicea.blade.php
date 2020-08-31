@@ -98,12 +98,12 @@
                             <p>{{ $service->lit_number }}</p>
                         </td>
                         <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="{{ route('show.edit.service', ['id'=> $service->id]) }}">
+                            <a class="btn btn-outline-info btn-sm" href="{{ route('show.edit.service', ['id'=> $service->id]) }}">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
                             </a>
-                            <a class="btn btn-danger btn-sm" href="{{ route('delete.service', ['id'=> $service->id]) }}">
+                            <a class="btn btn-outline-danger btn-sm" href="{{ route('delete.service', ['id'=> $service->id]) }}">
                                 <i class="fas fa-trash">
                                 </i>
                                 Delete

@@ -27,7 +27,7 @@ class CreateRdvsTable extends Migration
             $table->string('service')->default('null');
             $table->string('medcin')->default('null');
             $table->date('rdv_date');
-            $table->string('upload_file');
+            //$table->string('upload_file');
 
 
             $table->timestamps();
