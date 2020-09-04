@@ -13,4 +13,13 @@ class PatientController extends Controller
         $patients=Patient::all();
         return view("cheifpanel.consultepatient",["patients"=>$patients]);
     }
+
+    public function dossierMed()
+    {
+
+        return view('cheifpanel.dossiermed');
+
+    }
+
+
 }

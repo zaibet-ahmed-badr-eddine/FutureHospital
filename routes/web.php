@@ -100,6 +100,7 @@ Route::get('/consultrdv/{id}', 'RdvController@consultRdv')->name('medpanel.consu
 Route::get('consulte-patient', 'PatientController@showPatient')->name('show.patient');
 Route::get('/caddmembre', 'HomeController@cheifajouterMembre')->name('cheifpanel.ajoutermembrecheif');
 Route::get('/editcheifpassword', 'HomeController@editcpassword')->name('cheifpanel.editcpassword');
+Route::get('/dossiermed', 'PatientController@dossierMed')->name('cheifpanel.dossiermed');
 
 
 

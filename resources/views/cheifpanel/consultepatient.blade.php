@@ -49,10 +49,13 @@
                   </div>
                   <div class="card-footer">
                     <div class="text-right">
-                      <a href="" class="btn btn-sm btn-primary">
+                      <a href="/dossiermed" class="btn btn-sm btn-outline-success">
+                        <i class="fa fa-edit"></i> Dossier 
+                      </a>
+                      <a href="" class="btn btn-sm btn-outline-primary">
                         <i class="fa fa-edit"></i> Modifier
                       </a>
-                      <a href="" class="btn btn-sm btn-danger">
+                      <a href="" class="btn btn-sm btn-outline-danger">
                         <i class="fas fa-trash-alt"></i> Supprimer
                       </a>
                     </div>
