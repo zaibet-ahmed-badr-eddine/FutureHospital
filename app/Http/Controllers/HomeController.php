@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Service;
 use App\Rdv;
-
+use App\User;
 class HomeController extends Controller
 {
     /**
@@ -84,8 +84,8 @@ class HomeController extends Controller
     }
     public function ajouterServices()
     {
-
-        return view('adminpanel.ajouterservice');
+        $chefs = User::where('role_id', '=', 2)->get();
+        return view('adminpanel.ajouterservice', ["chefs"=> $chefs]);
 
     }
 

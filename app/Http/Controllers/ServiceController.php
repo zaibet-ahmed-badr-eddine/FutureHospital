@@ -42,7 +42,7 @@ class ServiceController extends Controller
     public function addservice(Request $request){
         $service = new Service();
         $service->name_s = $request->name_s;
-        $service->name_cs = $request->name_cs;
+        $service->chef_id = $request->chef_id;
         $service->lit_number = $request->lit_number;
         $service->save();
         $services = Service::all();

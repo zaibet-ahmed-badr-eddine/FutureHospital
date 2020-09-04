@@ -19,11 +19,14 @@
               <input type="text" class="form-control"  placeholder="Nom Service" name="name_s">
             </div>
     
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Nom du Chef Service</label>
-                  <input type="text" class="form-control"  placeholder="Nom du chef service" name="name_cs">
-                </div>
-
+              <div class="form-group">
+                <label for="cs">Nom du Chef Service</label>
+                <select class="form-control" name="chef_id" id="cs">
+                  @foreach ($chefs as $chef)
+                    <option value="{{ $chef->id }}">{{ $chef->name }}</option>  
+                  @endforeach
+                </select>
+              </div>
 
         <div class="form-group">
           <label for="exampleInputEmail1">Nombre de lit</label>
