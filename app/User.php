@@ -42,6 +42,6 @@ class User extends Authenticatable
     }
 
     function service(){
-        return $this->hasOne('App\Service');
+        return $this->belongsTo('App\Service');
     }
 }

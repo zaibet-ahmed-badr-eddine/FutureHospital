@@ -36,20 +36,20 @@ class userController extends Controller
     // show users depending on their roles
     public function showMembers($id){
       
-        $users = User::where('role_id', '=', $id)->get();
         if(Auth::user()->role->role === 'admin'){
-        return view('adminpanel.consulteUser', ['users'=> $users, "role_id"=>$id]);}
+            $users = User::where('role_id', '=', $id)->get();
+            return view('adminpanel.consulteUser', ['users'=> $users, "role_id"=>$id]);
+        }
+
         if(Auth::user()->role->role === 'chef_service'){
-           
+            $users = User::where('role_id', '=', $id)->where('service_id', "=", Auth::user()->service->id)->get();
             return view('cheifpanel.consulteuserc', ['users'=> $users, "role_id"=>$id]);
         }
 
     }
 
     // delte user 
-    public function deleteMember($id, $role_id){
-
-       
+    public function deleteMember($id, $role_id){       
         $user = User::find($id);
         $user->delete();
         $users = User::where('role_id', '=', $role_id)->get();

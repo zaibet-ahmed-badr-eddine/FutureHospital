@@ -18,7 +18,20 @@ class PatientController extends Controller
     {
 
         return view('cheifpanel.dossiermed');
+    }
 
+    public function acceptPatient($id){
+        $patient = patient::find($id);
+        $patient->confirmed = 1;
+        $patient->update();
+        $patients = patient::where('confirmed', '=', 0)->get();
+        return view('cheifpanel.cheifpanelhome', ["patients"=> $patients]);
+    }
+
+    public function refusePatient($id){
+        $patient = patient::find($id);
+        $patient->delete();
+        return view('cheifpanel.cheifpanelhome', ["patients"=> $patients]);
     }
 
 

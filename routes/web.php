@@ -21,17 +21,6 @@ Route::get('/', function () {
     return view('indexx');
 });
 
-
-
-
-
-
-
-
-
-
-
-
 Auth::routes();
 
 
@@ -58,23 +47,8 @@ Route::get('/ncalendar', 'HomeController@nursecalendar')->name('nursepanel.calen
 Route::get('/addmembre', 'HomeController@ajouterMembre')->name('adminpanel.ajoutermembre');
 Route::get('/addservice', 'HomeController@ajouterServices')->name('adminpanel.ajouterservice');
 
-
-
-
 //edit user infos
 Route::get('/editmyinfos', 'HomeController@editmyinfos')->name('adminpanel.editmyinfos');
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Route::post('addnewmember', 'userController@addMember')->name('add.user');
@@ -97,12 +71,12 @@ Route::get('/consultrdv/{id}', 'RdvController@consultRdv')->name('medpanel.consu
 
 
 //cheif functions
-Route::get('consulte-patient', 'PatientController@showPatient')->name('show.patient');
+Route::get('consulte-patient', 'patientController@showPatient')->name('show.patient');
 Route::get('/caddmembre', 'HomeController@cheifajouterMembre')->name('cheifpanel.ajoutermembrecheif');
 Route::get('/editcheifpassword', 'HomeController@editcpassword')->name('cheifpanel.editcpassword');
-Route::get('/dossiermed', 'PatientController@dossierMed')->name('cheifpanel.dossiermed');
-
-
+Route::get('/dossiermed', 'patientController@dossierMed')->name('cheifpanel.dossiermed');
+Route::get('accept-patient/{id}', 'patientController@acceptPatient')->name('accept.patient');
+Route::get('refuse-patient/{id}', 'patientController@refusePatient')->name('refuse.patient');
 
 
 //admin functions

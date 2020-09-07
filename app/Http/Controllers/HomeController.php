@@ -7,6 +7,7 @@ use Auth;
 use App\Service;
 use App\Rdv;
 use App\User;
+use App\patient;
 class HomeController extends Controller
 {
     /**
@@ -31,7 +32,8 @@ class HomeController extends Controller
 
     public function cheifpanelhome()
     {
-        return view('cheifpanel.cheifpanelhome');
+        $patients = patient::where('confirmed', '=', 0)->get();
+        return view('cheifpanel.cheifpanelhome', ['patients'=> $patients]);
     }
 
     public function medpanelhome()

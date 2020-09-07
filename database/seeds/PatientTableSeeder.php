@@ -8,9 +8,9 @@ class PatientTableSeeder extends Seeder
      * Run the database seeds.
      *
      * @return void
-     */
+    */
     public function run()
     {
-        factory(App\patient::class, 20)->create();
+        factory(App\patient::class, 5)->create();
     }
 }

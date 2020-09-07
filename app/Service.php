@@ -14,8 +14,8 @@ class service extends Model
 
 
 
-   function user(){
-       return $this->belongsTo('App\User');
+   function users(){
+       return $this->hasMany('App\User');
    }
    
 }
