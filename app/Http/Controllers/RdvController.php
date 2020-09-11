@@ -10,7 +10,7 @@ class RdvController extends Controller
 {
     public function gestionRdv($id)
     {
-        $rdvs = Rdv::all();
+        $rdvs = Rdv::where('confirmed', '=', 0)->get();
         $rdvt = Rdv::find($id);
         return view('nursepanel.gestionrdv', ['rdvs'=> $rdvs, 'rdvt'=> $rdvt]);
 
@@ -30,10 +30,31 @@ class RdvController extends Controller
         $rdv = Rdv::find($id);
         $rdv->medcin=$request->medcin;
         $rdv->rdv_date=$request->rdv_date;
+        $rdv->confirmed = 1;
         $rdv->update();
         return redirect('/gestionrdv/1');
 
 
     }
+    public function addRdv(Request $request){
+        $rdv = new Rdv();
+       
+        $rdv->name = $request->name;
+        $rdv->pseudoname = $request->pseudoname;
+        $rdv->gender = $request->gender;
+        $rdv->email = $request->email;
+        $rdv->phonenumber = $request->phonenumber;
+        $rdv->birthday = $request->birthday;
+        $rdv->bornplace = $request->bornplace;
+        $rdv->adress = $request->address;
+        // $rdv->service = $request->service;
+        $rdv->save();
+
+            return redirect('/bienvenue');
+       
+
+      
+               
+        }
 
 }

@@ -32,7 +32,7 @@ class HomeController extends Controller
 
     public function cheifpanelhome()
     {
-        $patients = patient::where('confirmed', '=', 0)->get();
+        $patients = Rdv::where('confirmed', '=', 1)->get();
         return view('cheifpanel.cheifpanelhome', ['patients'=> $patients]);
     }
 
@@ -114,7 +114,7 @@ class HomeController extends Controller
                 
                 return view('medpanel.editmyinfos', ['user'=> $user]);
             }
-            if(Auth::user()->role->role === 'infirmiere'){
+            if(Auth::user()->role->role === 'infermiere'){
                 return view('nursepanel.editmyinfos', ['user'=> $user]);
             }
         }

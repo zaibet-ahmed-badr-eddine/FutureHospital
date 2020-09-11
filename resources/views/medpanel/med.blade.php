@@ -50,6 +50,7 @@
  
 
 
+   <script src="{{asset('js/ckeditor.js')}}"></script>
 
 
 </head>
@@ -64,11 +65,9 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="index3.html" class="nav-link">ACCUEIL</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
+     
     </ul>
 
     <!-- SEARCH FORM -->
@@ -84,7 +83,7 @@
     </form>
 
     <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
+    {{-- <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
@@ -175,17 +174,16 @@
           <i class="fas fa-th-large"></i>
         </a>
       </li>
-    </ul>
+    </ul> --}}
   </nav>
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="{{ asset('dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">medcin Panel</span>
+    <a href="/meddashboard" class="brand-link">
+      
+      <span class="brand-text font-weight-light">PANNEAU MEDCIN</span>
     </a>
 
     <!-- Sidebar -->
@@ -194,9 +192,9 @@
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
           {{-- <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image"> --}}
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+        {{-- </div>
+        <div class="info"> --}}
+          <a href="/meddashboard" class="d-block">{{ Auth::user()->name }}
         </div>
       </div>
 
@@ -209,7 +207,7 @@
             <a href="/meddashboard" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
+                Tableau de bord
                 
               </p>
             </a>
@@ -251,7 +249,7 @@
 
 
           <li class="nav-item has-treeview">
-            <a href="rapport" class="nav-link">
+            <a href="/rapport" class="nav-link">
               <i class="fas fa-circle nav-icon"></i>
               <p>
                 rèdiger raport
@@ -274,10 +272,10 @@
           
           <li class="nav-header">EXAMPLES</li>
           <li class="nav-item">
-            <a href="mcalendar" class="nav-link">
+            <a href="/mcalendar" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
-                Calendar
+                Calendrier
                 {{-- <span class="badge badge-info right">2</span> --}}
               </p>
             </a>
@@ -365,7 +363,7 @@
                  onclick="event.preventDefault();
                                document.getElementById('logout-form').submit();">
                 <i class="nav-icon far fa-circle text-danger"></i>
-                  {{ __('Logout') }}
+                  {{ __('Se Deconnecter') }}
               </a>
 
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -391,7 +389,9 @@
     <div class="content-wrapper  " style="margin-left: 0px">
 
    @yield('content')
+  
     </div>
+ 
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -406,6 +406,7 @@
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->
+
 </div>
 <!-- ./wrapper -->
 
@@ -460,6 +461,21 @@
 
 
 
+ 
+<script>
+ 
+  ClassicEditor
+  .create( document.querySelector( '#editor' ) )
+  .catch( error => {
+      console.error( error );
+  } );
+ </script>
+
+
+<script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( 'article-ckeditor' );
+</script>
 
 
 

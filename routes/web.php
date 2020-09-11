@@ -20,12 +20,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('indexx');
 });
+Route::get('/bienvenue', function () {
+    return view('index');
+});
 
 Auth::routes();
 
 
 
 Route::post('loginUser', 'LoginController@login')->name('login.user');
+
 
 
 
@@ -54,9 +58,12 @@ Route::get('/editmyinfos', 'HomeController@editmyinfos')->name('adminpanel.editm
 Route::post('addnewmember', 'userController@addMember')->name('add.user');
 Route::post('addnewmservice', 'ServiceController@addservice')->name('add.service');
 
+//addRdv
+Route::post('addrdv', 'RdvController@addRdv')->name('add.rdv');
+
 
 //nurse functions
-Route::get('/editnursepassword', 'HomeController@editmpassword')->name('medpanel.editmpassword');
+Route::get('/editnursepassword', 'HomeController@editnpassword')->name('medpanel.editmpassword');
 Route::get('/gestionrdv/{id}', 'RdvController@gestionRdv')->name('nursepanel.gestionrdv');
 Route::post('/gestionrdv/{id}', 'RdvController@addMed')->name('add.med');
 
