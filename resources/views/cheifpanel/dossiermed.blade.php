@@ -81,14 +81,14 @@
                  
                   
                     <strong>Les Information du Patient </strong><br>
-                     Nom     :  <br>
-                     Prenom  :  <br>
-                     Age     :  <br>
-                     Adresse :  <br>
-                     Genre   :  <br>
-                     Email   :  <br>
-                     Num de Tlf   :  <br>
-                     Service :  <br>
+                     Nom     :  {{ $patient->name }}<br>
+                     Prenom  :  {{ $patient->pseudoname }}<br>
+                     Age     :  {{ $patient->age }}<br>
+                     Adresse :  {{ $patient->adress }}<br>
+                     Genre   :  {{ $patient->gender }}<br>
+                     Email   :  {{ $patient->email }}<br>
+                     Num de Tlf   :  {{ $patient->phonenumber }}<br>
+                     Service :  {{ Auth::user()->service->name_s }}<br>
                    
                    
                   

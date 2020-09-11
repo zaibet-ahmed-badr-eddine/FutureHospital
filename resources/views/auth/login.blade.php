@@ -17,9 +17,10 @@
 
 				<form method="POST" action="{{ route('login.user') }}">
 					@csrf
-
-					
 					<p class="legend">LOGIN </p>
+					@isset($trouble)
+						{{ $trouble }}
+					@endisset
 					<div class="input">
 						<input id="email" type="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 						<span class="fa fa-envelope"></span>

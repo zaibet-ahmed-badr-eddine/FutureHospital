@@ -25,7 +25,7 @@ Auth::routes();
 
 
 
-Route::post('loginUser', 'LoginController@login')->name('login.user');
+Route::post('login', 'LoginController@login')->name('login.user');
 
 
 
@@ -74,7 +74,7 @@ Route::get('/consultrdv/{id}', 'RdvController@consultRdv')->name('medpanel.consu
 Route::get('consulte-patient', 'patientController@showPatient')->name('show.patient');
 Route::get('/caddmembre', 'HomeController@cheifajouterMembre')->name('cheifpanel.ajoutermembrecheif');
 Route::get('/editcheifpassword', 'HomeController@editcpassword')->name('cheifpanel.editcpassword');
-Route::get('/dossiermed', 'patientController@dossierMed')->name('cheifpanel.dossiermed');
+Route::get('/dossiermed/{id}', 'patientController@dossierMed')->name('cheifpanel.dossiermed');
 Route::get('accept-patient/{id}', 'patientController@acceptPatient')->name('accept.patient');
 Route::get('refuse-patient/{id}', 'patientController@refusePatient')->name('refuse.patient');
 

@@ -85,36 +85,41 @@
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          @if (count($patients) > 0)
-            <span class="badge badge-danger navbar-badge">new</span>            
-          @endif
-        </a>
 
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-        @foreach ($patients as $patient)
-            <a href="#" class="dropdown-item">
-              <!-- Message Start -->
-              <div class="media">
-                <img src="{{ asset('dist/img/user1-128x128.jpg') }}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-                <div class="media-body">
-                  <h3 class="dropdown-item-title">
-                    {{ $patient->name }}
-                    <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                  </h3>
-                  <p class="text-sm">{{ $patient->pseudoname }}</p>
+        @isset($patients)
+            
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-comments"></i>
+            @if (count($patients) > 0)
+              <span class="badge badge-danger navbar-badge">new</span>            
+            @endif
+          </a>
+
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          @foreach ($patients as $patient)
+              <a href="#" class="dropdown-item">
+                <!-- Message Start -->
+                <div class="media">
+                  <img src="{{ asset('dist/img/user1-128x128.jpg') }}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">
+                      {{ $patient->name }}
+                      <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                    </h3>
+                    <p class="text-sm">{{ $patient->pseudoname }}</p>
+                  </div>
                 </div>
-              </div>
-              <!-- Message End -->
-            </a>
-            &nbsp;
-            &nbsp;
-            <a href="{{ route('accept.patient', ['id'=> $patient->id])}}" class="btn btn-primary btn-sm">O</a>
-            <a href="{{ route('refuse.patient', ['id'=> $patient->id])}}" class="btn btn-danger btn-sm">X</a>
-            <div class="dropdown-divider"></div>
-        @endforeach
-          </div>
+                <!-- Message End -->
+              </a>
+              &nbsp;
+              &nbsp;
+              <a href="{{ route('accept.patient', ['id'=> $patient->id])}}" class="btn btn-primary btn-sm">O</a>
+              <a href="{{ route('refuse.patient', ['id'=> $patient->id])}}" class="btn btn-danger btn-sm">X</a>
+              <div class="dropdown-divider"></div>
+          @endforeach
+            </div>
+        @endisset
+
       </li>
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">

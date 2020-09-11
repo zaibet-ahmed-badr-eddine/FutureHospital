@@ -14,10 +14,10 @@ class PatientController extends Controller
         return view("cheifpanel.consultepatient",["patients"=>$patients]);
     }
 
-    public function dossierMed()
+    public function dossierMed($id)
     {
-
-        return view('cheifpanel.dossiermed');
+        $patient = Patient::find($id);
+        return view('cheifpanel.dossiermed', ["patient"=> $patient]);
     }
 
     public function acceptPatient($id){
