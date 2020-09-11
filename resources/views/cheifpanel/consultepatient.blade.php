@@ -49,7 +49,7 @@
                   </div>
                   <div class="card-footer">
                     <div class="text-right">
-                      <a href="/dossiermed" class="btn btn-sm btn-outline-success">
+                      <a href="/dossiermed/{{$patient->id}}" class="btn btn-sm btn-outline-success">
                         <i class="fa fa-edit"></i> Dossier 
                       </a>
                       <a href="" class="btn btn-sm btn-outline-primary">

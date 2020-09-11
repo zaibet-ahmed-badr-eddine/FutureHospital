@@ -7,7 +7,7 @@ use Auth;
 use App\Service;
 use App\Rdv;
 use App\User;
-use App\patient;
+use App\Patient;
 class HomeController extends Controller
 {
     /**
