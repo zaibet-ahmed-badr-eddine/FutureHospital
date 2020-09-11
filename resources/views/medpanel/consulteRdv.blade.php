@@ -138,13 +138,13 @@
           
           <!-- /.card-header -->
           <!-- form start -->
-          <form class="form-horizontal">
+        
             <div class="card-footer">
-              <button type="submit"  class="btn btn-outline-success btn-lg btn-block">Rèdiger rapport</button>
+              <a href="/rapport"><button type="submit"  class="btn btn-outline-success btn-lg btn-block">Rèdiger rapport</button></a>
               
             
              </div>
-          </form>
+         
         </div>
         <!-- /.card -->
 

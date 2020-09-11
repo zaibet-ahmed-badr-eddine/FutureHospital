@@ -24,9 +24,9 @@ class CreateRdvsTable extends Migration
             $table->date('birthday');
             $table->string('adress');
             $table->string('phonenumber');
-            $table->string('service')->default('null');
-            $table->string('medcin')->default('null');
-            $table->date('rdv_date');
+            $table->string('medcin')->default('');
+            $table->date('rdv_date')->default('2015-01-30');
+            $table->boolean('confirmed')->default(0);
             //$table->string('upload_file');
 
 

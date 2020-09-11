@@ -24,6 +24,8 @@ class CreatePatientsTable extends Migration
             $table->string('gender');
             $table->string('adress');
             $table->string('phonenumber');
+            
+
             $table->boolean('confirmed')->default(0);
             $table->timestamps();
         });
