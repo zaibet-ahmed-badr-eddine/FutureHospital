@@ -7,11 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-           Patient
+            
+          <h3>Patients</h3> 
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="/cheifdashboard">Tableau de bord</a></li>
               <li class="breadcrumb-item active">Patients</li>
             </ol>
           </div>

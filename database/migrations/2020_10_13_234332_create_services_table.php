@@ -17,6 +17,7 @@ class CreateServicesTable extends Migration
             $table->id();
             $table->string('name_s');
             $table->integer('lit_number');
+            $table->integer('chef_id')->nullable();
             $table->timestamps();
         });
     }

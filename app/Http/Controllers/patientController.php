@@ -57,5 +57,14 @@ class PatientController extends Controller
         return view('cheifpanel.cheifpanelhome', ["patients"=> $patients]);
     }
 
+    public function storeRapport(Request $request, $id){
+        $patient = Patient::find($id);
+        $patient->rapport = $request->rapport;
+        $patient->update();
+        return redirect('/');
+    }
+
+    
+
 
 }

@@ -16,15 +16,10 @@ class ContactController extends Controller
 
     public function store(Request $request){
         $contact = new Contact();
-        $contact->nom = $request->nom;
-        $contact->prenom = $request->prenom;
-        $contact->sexe = $request->sexe;
+        $contact->name = $request->name;
         $contact->email = $request->email;
-        $contact->phonenumber = $request->phonenumber;
-        $contact->date = $request->date;
-        $contact->bornplace = $request->bornplace;
-        $contact->adress = $request->adress;
-        $contact->type = $request->type;
+        $contact->subject = $request->subject;
+        $contact->message = $request->message;
         $contact->save();
         return redirect('/');
     }

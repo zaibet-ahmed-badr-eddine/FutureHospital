@@ -11,7 +11,7 @@
       </div>
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="">Home</a></li>
+          <li class="breadcrumb-item"><a href="/meddashboard">Tableau de bord</a></li>
           <li class="breadcrumb-item active">Rendez-Vous</li>
         </ol>
       </div>
@@ -140,7 +140,7 @@
           <!-- form start -->
         
             <div class="card-footer">
-              <a href="/rapport"><button type="submit"  class="btn btn-outline-success btn-lg btn-block">Rèdiger rapport</button></a>
+              <a href="/rapport/{{$rdvt->id}}"><button type="submit"  class="btn btn-outline-success btn-lg btn-block">Rèdiger rapport</button></a>
               
             
              </div>

@@ -10,12 +10,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Projects</h1>
+            <h1>Services</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Projects</li>
+              <li class="breadcrumb-item"><a href="/admindashboard">Tableau de bord</a></li>
+              <li class="breadcrumb-item active">Services</li>
             </ol>
           </div>
         </div>
@@ -28,7 +28,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Projects</h3>
+          <h3 class="card-title">Services</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -51,7 +51,7 @@
                           Chef Service
                       </th>
                       <th>
-                        Nmbre de patient
+                        Photo Chef Service
                       </th>
                       <th style="width: 15%" class="text-center">
                           Nombre de lit
@@ -68,31 +68,26 @@
                         </td>
                         <td>
                             <p>{{ $service->name_s }}</p>
+                              
                         </td>
                         <td>
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar.png">
-                                </li>
-                                <li class="list-inline-item">
-                                    <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar2.png">
-                                </li>
-                                <li class="list-inline-item">
-                                    <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar3.png">
-                                </li>
-                                <li class="list-inline-item">
-                                    <img alt="Avatar" class="table-avatar" src="../../dist/img/avatar04.png">
-                                </li>
-                            </ul>
+                          @if($service->serviceChef() == null)
+                            {{'pas de chef'}}
+                          @else
+                            {{$service->serviceChef()->name}}
+                          @endif
+                         
                         </td>
                         <td class="project_progress">
-                            <div class="progress progress-sm">
-                                <div class="progress-bar bg-green" role="progressbar" aria-volumenow="57" aria-volumemin="0" aria-volumemax="100" style="width: 57%">
-                                </div>
-                            </div>
-                            <small>
-                                57% Complete
-                            </small>
+                          @if($service->serviceChef() == null)
+                          {{'pas de photo'}}
+                        @else
+                        <img class=" img-circle ml-5" width="30px" height="30px"
+                        src={{$service->serviceChef()->getAvatar()}}
+                        alt="User profile picture">
+                        @endif
+
+                          
                         </td>
                         <td class="project-state">
                             <p>{{ $service->lit_number }}</p>

@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-         'name','pseudoname','email', 'password','bornplace','birthday','phonenumber',
+         'name','pseudoname','email', 'password','bornplace','birthday','phonenumber','avatar'
     ];
 
     /**
@@ -43,5 +43,12 @@ class User extends Authenticatable
 
     function service(){
         return $this->belongsTo('App\Service');
+    }
+
+    public function getAvatar(){
+        if ($this->avatar == null){
+            return "/img/img_24787.png";
+        }
+        return '/storage/'.$this->avatar;
     }
 }

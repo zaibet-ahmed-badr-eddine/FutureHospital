@@ -12,19 +12,45 @@
             @endif
 
             @if ($role_id == 3)
-              <h1>Medcin</h1>  
+              <h1>Medcin</h1>
+             
             @endif
 
             @if ($role_id == 4)
-              <h1>infermiere</h1>  
+            <h1>Infirmiere</h1>
             @endif
           </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">infirmieres</li>
-            </ol>
+
+         <div class="col-sm-6">
+            @if ($role_id == 3)
+            
+            
+                <ol class="breadcrumb float-sm-right">
+                  
+                  <li class="breadcrumb-item"><a href="/cheifdashboard">Tableau de bord</a></li>
+                  <li class="breadcrumb-item active">Medcin</li>
+                </ol>
+              
+            @endif
+
+            @if ($role_id == 4)
+              
+              
+                <ol class="breadcrumb float-sm-right">
+                  
+                  <li class="breadcrumb-item"><a href="/cheifdashboard">Tableau de bord</a></li>
+                  <li class="breadcrumb-item active">Infirmiere</li>
+                </ol>
+              
+            @endif
+
           </div>
+
+
+
+
+
+          
         </div>
       </div><!-- /.container-fluid -->
     </section>

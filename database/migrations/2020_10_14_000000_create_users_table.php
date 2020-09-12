@@ -15,9 +15,9 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('role_id');
+            $table->foreignId('role_id');
             $table->foreign('role_id')->references('id')->on('roles');
-            $table->unsignedBigInteger('service_id');
+            $table->foreignId('service_id')->nullable();
             $table->foreign('service_id')->references('id')->on('services');
             $table->string('name');
             $table->string('pseudoname');
@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('bornplace');
             $table->date('birthday');
             $table->string('phonenumber');
+            $table->string('avatar')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -55,7 +55,7 @@
               <img src="img/logo2.png" class="img-responsive">
             </div>
             <div class="banner-text text-center">
-              <h1 class="white">Healthcare at your desk!!</h1>
+              <h1 class="white">SOINS DE SANTÉ À VOTRE BUREAU !!</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>tempor incididunt ut labore et dolore magna aliqua.</p>
               <a href="#rdv" class="btn btn-appoint">Prenez Rendez-vous</a>
             </div>
@@ -74,47 +74,41 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 col-sm-4">
-          <h2 class="ser-title">Our Service</h2>
+          <h2 class="ser-title">PEU DE NOS SERVICES</h2>
           <hr class="botm-line">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris cillum.</p>
+          <p></p>
         </div>
         <div class="col-md-4 col-sm-4">
           <div class="service-info">
-            <div class="icon">
-              <i class="fa fa-stethoscope"></i>
-            </div>
+            {{-- <div class="icon">
+              <i class="fas fa-brain"></i>
+            </div> --}}
             <div class="icon-info">
-              <h4>24 Hour Support</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h4>PNEUMO</h4>
+              <p>Spécialité médicale qui se consacre à l'étude et au traitement des maladies des poumons, des bronches, de la plèvre et du médiastin (espace situé entre les poumons.</p>
             </div>
           </div>
           <div class="service-info">
-            <div class="icon">
-              <i class="fa fa-ambulance"></i>
-            </div>
+            
             <div class="icon-info">
-              <h4>Emergency Services</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h4>NEURO</h4>
+              <p>Spécialité médicale consacrée à l'étude et au traitement des maladies touchant le système nerveux central (cerveau, moelle épinière) ou périphérique (racines et nerfs.</p>
             </div>
           </div>
         </div>
         <div class="col-md-4 col-sm-4">
           <div class="service-info">
-            <div class="icon">
-              <i class="fa fa-user-md"></i>
-            </div>
+           
             <div class="icon-info">
-              <h4>Medical Counseling</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h4>CARDIO</h4>
+              <p>Spécialité médicale qui traite du cœur et des vaisseaux sanguins, en particulier de leurs maladies.</p>
             </div>
           </div>
           <div class="service-info">
-            <div class="icon">
-              <i class="fa fa-medkit"></i>
-            </div>
+          
             <div class="icon-info">
-              <h4>Premium Healthcare</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h4>PEDIATRE</h4>
+              <p>Branche de la médecine consacrée à l'enfant et à ses maladies.</p>
             </div>
           </div>
         </div>
@@ -130,34 +124,34 @@
           <div class="col-md-4 col-sm-4 bor-left">
             <div class="mt-boxy-color"></div>
             <div class="medi-info">
-              <h3>Emergency Case</h3>
+              <h3>Cas d'urgence</h3>
               <p>I am text block. Edit this text from Appearance / Customize / Homepage header columns. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <a href="#" class="medi-info-btn">READ MORE</a>
+           
             </div>
           </div>
           <div class="col-md-4 col-sm-4">
             <div class="medi-info">
-              <h3>Emergency Case</h3>
+              <h3>Cas d'urgence</h3>
               <p>I am text block. Edit this text from Appearance / Customize / Homepage header columns. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <a href="#" class="medi-info-btn">READ MORE</a>
+             
             </div>
           </div>
           <div class="col-md-4 col-sm-4 mt-boxy-3">
             <div class="mt-boxy-color"></div>
             <div class="time-info">
-              <h3>Opening Hours</h3>
+              <h3>Horaires d'ouvertures</h3>
               <table style="margin: 8px 0px 0px;" border="1">
                 <tbody>
                   <tr>
-                    <td>Monday - Friday</td>
+                    <td>dimanche - jeudi</td>
                     <td>8.00 - 17.00</td>
                   </tr>
                   <tr>
-                    <td>Saturday</td>
+                    <td>vendredi</td>
                     <td>9.30 - 17.30</td>
                   </tr>
                   <tr>
-                    <td>Sunday</td>
+                    <td>samedi</td>
                     <td>9.30 - 15.00</td>
                   </tr>
                 </tbody>
@@ -208,7 +202,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2 class="ser-title">Meet Our Doctors!</h2>
+          <h2 class="ser-title">RENCONTREZ NOS MÉDECINS!</h2>
           <hr class="botm-line">
         </div>
         <div class="col-md-3 col-sm-3 col-xs-6">
@@ -277,11 +271,10 @@
       <div class=" row">
         <div class="col-md-2"></div>
         <div class="text-right-md col-md-4 col-sm-4">
-          <h2 class="section-title white lg-line">« A few words<br> about us »</h2>
+          <h2 class="section-title white lg-line">« QUELQUES MOTS<br>PROPOS DE NOUS »</h2>
         </div>
         <div class="col-md-4 col-sm-5">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typek
-          <p class="text-right text-primary"><i>— Medilap Healthcare</i></p>
+          Nous sommes un centre hospitalier  à dimension mondiale reconnu. chaque année des milliers de malades : en consultation, en urgence, lors d’hospitalisations programmées ou en hospitalisation à domicile, à tous les âges de la vie. Nous assurons un service public de santé pour tous, 24h/24. C’est pour nous à la fois un devoir et une fierté.          <p class="text-right text-primary"><i>— Hopital Du Future</i></p>
         </div>
         <div class="col-md-2"></div>
       </div>
@@ -302,12 +295,7 @@
         </div>
         <div class="col-md-4 col-sm-4">
           <h3>Prenez Rendez-Vous</h3>
-          <div class="space"></div>
-          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>321 Awesome Street<br> New York, NY 17022</p>
-          <div class="space"></div>
-          <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@companyname.com</p>
-          <div class="space"></div>
-          <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+1 800 123 1234</p>
+ 
         </div>
         <div class="col-md-8 col-sm-8 marb20">
           <div class="contact-info">
@@ -374,14 +362,7 @@
 
                 
                  
-                  <div class="input-group">
-                    <div class="custom-file">
-                      <input type="file" class="form-control br-radius-zero" id="exampleInputFile">
-                     
-                    </div>
-                   
-                   
-                  </div>
+                 
                 
                 <div class="validation"></div>
               </div>
@@ -412,25 +393,26 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2 class="ser-title">Contact us</h2>
+          <h2 class="ser-title">Contactez-Nous</h2>
           <hr class="botm-line">
         </div>
         <div class="col-md-4 col-sm-4">
-          <h3>Contact Info</h3>
+          <h3>Contact Infos</h3>
           <div class="space"></div>
-          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>321 Awesome Street<br> New York, NY 17022</p>
+          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>ali mendjli<br> constantine</p>
           <div class="space"></div>
-          <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@companyname.com</p>
+          <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@hopitalfuture.com</p>
           <div class="space"></div>
-          <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+1 800 123 1234</p>
+          <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>0669288761</p>
         </div>
         <div class="col-md-8 col-sm-8 marb20">
           <div class="contact-info">
-            <h3 class="cnt-ttl">Having Any Query! Or Book an appointment</h3>
+            <h3 class="cnt-ttl">Avoir une requête! Ou Prenez rendez-vous</h3>
             <div class="space"></div>
             <div id="sendmessage">Your message has been sent. Thank you!</div>
             <div id="errormessage"></div>
-            <form action="" method="post" role="form" class="contactForm">
+            <form action="{{ route('store.contact') }}" method="post" class="contactForm">
+              @csrf
               <div class="form-group">
                 <input type="text" name="name" class="form-control br-radius-zero" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                 <div class="validation"></div>
@@ -466,27 +448,27 @@
         <div class="row">
           <div class="col-md-4 col-sm-4 marb20">
             <div class="ftr-tle">
-              <h4 class="white no-padding">About Us</h4>
+              <h4 class="white no-padding">A Propos de Nous</h4>
             </div>
             <div class="info-sec">
-              <p>Praesent convallis tortor et enim laoreet, vel consectetur purus latoque penatibus et dis parturient.</p>
+              <p>Nous sommes un centre hospitalier à dimension mondiale reconnu. C’est pour nous à la fois un devoir et une fierté.</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 marb20">
             <div class="ftr-tle">
-              <h4 class="white no-padding">Quick Links</h4>
+              <h4 class="white no-padding">Liens Rapides</h4>
             </div>
             <div class="info-sec">
               <ul class="quick-info">
-                <li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>
-                <li><a href="#service"><i class="fa fa-circle"></i>Service</a></li>
-                <li><a href="#contact"><i class="fa fa-circle"></i>Appointment</a></li>
+                <li><a href="#banner"><i class="fa fa-circle"></i>Accueil</a></li>
+                <li><a href="#service"><i class="fa fa-circle"></i>Services</a></li>
+                <li><a href="#rdv"><i class="fa fa-circle"></i>Rendez-vous</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-4 col-sm-4 marb20">
             <div class="ftr-tle">
-              <h4 class="white no-padding">Follow us</h4>
+              <h4 class="white no-padding">Suivez nous</h4>
             </div>
             <div class="info-sec">
               <ul class="social-icon">
@@ -500,24 +482,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-line">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            © Copyright Medilab Theme. All Rights Reserved
-            <div class="credits">
-              <!--
-                All the links in the footer should remain intact.
-                You can delete the links only if you purchased the pro version.
-                Licensing information: https://bootstrapmade.com/license/
-                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Medilab
-              -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade.com</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+   
   </footer>
   <!--/ footer-->
 

@@ -134,8 +134,8 @@ class userController extends Controller
 
        
 
-        if(Auth::user()->role->role === 'admin'){
-            return view('adminpanel.adminpanelhome');
+            if(Auth::user()->role->role === 'admin'){
+                return view('adminpanel.adminpanelhome');
             }
             if(Auth::user()->role->role === 'chef_service'){
                 return view('cheifpanel.cheifpanelhome');
@@ -146,6 +146,39 @@ class userController extends Controller
             if(Auth::user()->role->role === 'infirmiere'){
                 return view('nursepanel.nursepanelhome');
             }
+    }
+
+
+
+    public function uploadphoto(Request $request){
+        $user = User::find(auth()->id());
+        $attributes=request()->validate([
+            'avatar'=>['image','mimes:png,jpg,jpeg,gif'],
+        ]);
+        if (request('avatar')){
+            $attributes['avatar']=request('avatar')->store('avatars');
+        }
+        $user->update($attributes);    
+       
+   
+
+        if(Auth::user()->role->role === 'admin'){
+            
+            return redirect("/admindashboard");
+
+        }
+        if(Auth::user()->role->role === 'chef_service'){
+    
+            return redirect("/cheifdashboard");
+            
+        }
+        if(Auth::user()->role->role === 'medcin'){
+     
+            return redirect("/meddashboard");
+        }
+        if(Auth::user()->role->role === 'infirmiere'){
+            return redirect("/nursedashboard");
+        }
     }
 
 }

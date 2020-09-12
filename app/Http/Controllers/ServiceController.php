@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Service;
+use App\User;
 
 class ServiceController extends Controller
 {
@@ -45,6 +46,9 @@ class ServiceController extends Controller
         $service->chef_id = $request->chef_id;
         $service->lit_number = $request->lit_number;
         $service->save();
+        $user=User::find($request->chef_id);
+        $user->service_id=$service->id;
+        $user->save();
         $services = Service::all();
         return view('adminpanel.consulterservicea', ['services'=> $services]);
     }

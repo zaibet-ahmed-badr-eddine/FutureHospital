@@ -35,10 +35,10 @@ Route::post('login', 'LoginController@login')->name('login.user');
 
 //dashboard
 
-Route::get('/admindashboard', 'HomeController@adminpanelhome')->name('adminpanel.adminpanelhome');
-Route::get('/cheifdashboard', 'HomeController@cheifpanelhome')->name('cheifpanel.cheifpanelhome');
-Route::get('/meddashboard', 'HomeController@medpanelhome')->name('medpanel.medpanelhome');
-Route::get('/nursedashboard', 'HomeController@nursepanelhome')->name('nursepanel.nursepanelhome');
+Route::get('/admindashboard', 'HomeController@adminpanelhome')->name('adminpanel.adminpanelhome')->middleware('admin');
+Route::get('/cheifdashboard', 'HomeController@cheifpanelhome')->name('cheifpanel.cheifpanelhome')->middleware('chief');
+Route::get('/meddashboard', 'HomeController@medpanelhome')->name('medpanel.medpanelhome')->middleware('med');
+Route::get('/nursedashboard', 'HomeController@nursepanelhome')->name('nursepanel.nursepanelhome')->middleware('nurse');
 
 //calendar
 
@@ -63,27 +63,26 @@ Route::post('addrdv', 'RdvController@addRdv')->name('add.rdv');
 
 
 //nurse functions
-Route::get('/editnursepassword', 'HomeController@editnpassword')->name('medpanel.editmpassword');
-Route::get('/gestionrdv/{id}', 'RdvController@gestionRdv')->name('nursepanel.gestionrdv');
-Route::post('/gestionrdv/{id}', 'RdvController@addMed')->name('add.med');
+Route::get('/editnursepassword', 'HomeController@editnpassword')->name('medpanel.editmpassword')->middleware('nurse');
+Route::get('/gestionrdv/{id}', 'RdvController@gestionRdv')->name('nursepanel.gestionrdv')->middleware('nurse');
+Route::post('/gestionrdv/{id}', 'RdvController@addMed')->name('add.med')->middleware('nurse');
 
 
 
 
 //med Fuctions
-Route::get('/rapport', 'HomeController@rèdigerapport')->name('medpanel.rapport');
-Route::get('/editmedpassword', 'HomeController@editmpassword')->name('medpanel.editmpassword');
-Route::get('/consultrdv/{id}', 'RdvController@consultRdv')->name('medpanel.consulteRdv');
-
-
+Route::get('/rapport/{id}', 'HomeController@rèdigerapport')->name('medpanel.rapport')->middleware('med');
+Route::get('/editmedpassword', 'HomeController@editmpassword')->name('medpanel.editmpassword')->middleware('med');
+Route::get('/consultrdv/{id}', 'RdvController@consultRdv')->name('medpanel.consulteRdv')->middleware('med');
+Route::post('rediger-rapport/{id}', 'patientController@storeRapport')->name('rediger.rapport')->middleware('med');
 
 //cheif functions
-Route::get('consulte-patient', 'patientController@showPatient')->name('show.patient');
-Route::get('/caddmembre', 'HomeController@cheifajouterMembre')->name('cheifpanel.ajoutermembrecheif');
-Route::get('/editcheifpassword', 'HomeController@editcpassword')->name('cheifpanel.editcpassword');
-Route::get('/dossiermed/{id}', 'patientController@dossierMed')->name('cheifpanel.dossiermed');
-Route::get('accept-patient/{id}', 'patientController@acceptPatient')->name('accept.patient');
-Route::get('refuse-patient/{id}', 'patientController@refusePatient')->name('refuse.patient');
+Route::get('consulte-patient', 'patientController@showPatient')->name('show.patient')->middleware('chief');
+Route::get('/caddmembre', 'HomeController@cheifajouterMembre')->name('cheifpanel.ajoutermembrecheif')->middleware('chief');
+Route::get('/editcheifpassword', 'HomeController@editcpassword')->name('cheifpanel.editcpassword')->middleware('chief');
+Route::get('/dossiermed/{id}', 'patientController@dossierMed')->name('cheifpanel.dossiermed')->middleware('chief');
+Route::get('accept-patient/{id}', 'patientController@acceptPatient')->name('accept.patient')->middleware('chief');
+Route::get('refuse-patient/{id}', 'patientController@refusePatient')->name('refuse.patient')->middleware('chief');
 
 
 //admin functions
@@ -94,8 +93,13 @@ Route::post('edit-user/{id}', 'userController@updateMember')->name('edit.member'
 Route::post('edit-own', 'userController@modifyOwnInfo')->name('edit.own.info');
 Route::post('edit-own-password', 'userController@modifypassword')->name('edit.own.password');
 Route::get('delete-service/{id}', 'ServiceController@deleteService')->name('delete.service');
-Route::get('edit-service/{id}', 'ServiceController@edit')->name('show.edit.service'); 
-Route::post('update-service/{id}', 'ServiceController@modifyservice')->name('update.service');
-Route::get('/editadminpassword', 'HomeController@editpassword')->name('adminpanel.editpassword');
-Route::get('/consultservicea', 'HomeController@consultservicea')->name('adminpanel.consulterservicea');
+Route::get('edit-service/{id}', 'ServiceController@edit')->name('show.edit.service')->middleware('admin');
+Route::post('update-service/{id}', 'ServiceController@modifyservice')->name('update.service')->middleware('admin');
+Route::get('/editadminpassword', 'HomeController@editpassword')->name('adminpanel.editpassword')->middleware('admin');
+Route::get('/consultservicea', 'HomeController@consultservicea')->name('adminpanel.consulterservicea')->middleware('admin');
+Route::get('/mailbox', 'HomeController@mailbox')->name('adminpanel.mailbox')->middleware('admin');
 
+
+
+Route::post('store-contact', 'ContactController@store')->name('store.contact');
+Route::post('update-img', 'userController@uploadphoto')->name('upload.photo');

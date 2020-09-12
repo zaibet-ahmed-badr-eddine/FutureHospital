@@ -11,7 +11,7 @@
       </div>
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="/indexx">Home</a></li>
+          <li class="breadcrumb-item"><a href="/nursedashboard">Tableau de bord</a></li>
           <li class="breadcrumb-item active">Rendez-Vous</li>
         </ol>
       </div>

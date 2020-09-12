@@ -12,8 +12,9 @@
             </div>
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="/meddashboard">Accueil</a></li>
-                <li class="breadcrumb-item active">Editeur du texte</li>
+                <li class="breadcrumb-item"><a href="/meddashboard">Tableau de bord</a></li>
+                <li class="breadcrumb-item"><a href="/consultrdv/1">Rendez-vous</a></li>
+                <li class="breadcrumb-item active">Rapport</li>
               </ol>
             </div>
           </div>
@@ -43,16 +44,16 @@
               <!-- /.card-header -->
               <div class="card-body pad">
                 <div class="mb-3">
-                  <form action="" method="post">
+                  <form action="{{ route('rediger.rapport', ['id'=> $patient->id]) }}" method="post">
                     @csrf
                     <textarea class="textarea" placeholder="Place some text here"
-                              style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
+                              style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" name="rapport">
                     </textarea>
+                    <button type="submit"  class="btn btn-outline-success btn-lg ">Rèdiger rapport</button>
                   </form>
                          
                 </div>
                
-                <button type="submit"  class="btn btn-outline-success btn-lg ">Rèdiger rapport</button>
 
               </div>
             </div>
