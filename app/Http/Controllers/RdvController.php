@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Rdv;
-
+use App\User;
 
 class RdvController extends Controller
 {
@@ -12,7 +12,8 @@ class RdvController extends Controller
     {
         $rdvs = Rdv::where('confirmed', '=', 0)->get();
         $rdvt = Rdv::find($id);
-        return view('nursepanel.gestionrdv', ['rdvs'=> $rdvs, 'rdvt'=> $rdvt]);
+        $meds = User::where('role_id', '=', 3)->get();
+        return view('nursepanel.gestionrdv', ['rdvs'=> $rdvs, 'rdvt'=> $rdvt, "meds"=> $meds]);
 
     }
     public function consultRdv($id)

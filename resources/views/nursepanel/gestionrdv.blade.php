@@ -151,11 +151,9 @@
                 <label for="inputEmail3" class="col-sm-2 col-form-label">choisi un medcin</label>
                 <div class="col-sm-10">
                   <select class="form-control" name="medcin">            
-                    <option selected="selected" value="medcin5">medcin 5</option>
-                    <option value="medcin2" >medcin 2</option>
-                    <option value="medcin3" >medcin 3</option>
-                    <option value="medcin4" >medcin 4</option></select>
-                 
+                    @foreach ($meds as $med)
+                      <option selected="selected" value="{{ $med->name }}">{{ $med->name }}</option>
+                    @endforeach
                 </div>
               </div>
            
