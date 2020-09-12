@@ -8,6 +8,7 @@ use App\Service;
 use App\Rdv;
 use App\User;
 use App\Patient;
+use App\Contact;
 class HomeController extends Controller
 {
     /**
@@ -177,14 +178,14 @@ class HomeController extends Controller
 
     public function mailbox()
     {
-        
-        return view('adminpanel.mailbox');
+        $mails = Contact::all();
+        return view('adminpanel.mailbox', ['mails'=> $mails]);
 
     }
-    public function read()
+    public function read($id)
     {
-        
-        return view('adminpanel.read');
+        $mail = Contact::find($id);
+        return view('adminpanel.read', ['mail'=> $mail]);
 
     }
 

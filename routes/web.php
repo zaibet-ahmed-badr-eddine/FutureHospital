@@ -98,7 +98,7 @@ Route::post('update-service/{id}', 'ServiceController@modifyservice')->name('upd
 Route::get('/editadminpassword', 'HomeController@editpassword')->name('adminpanel.editpassword')->middleware('admin');
 Route::get('/consultservicea', 'HomeController@consultservicea')->name('adminpanel.consulterservicea')->middleware('admin');
 Route::get('/mailbox', 'HomeController@mailbox')->name('adminpanel.mailbox')->middleware('admin');
-Route::get('/read', 'HomeController@read')->name('adminpanel.read')->middleware('admin');
+Route::get('/read/{id}', 'HomeController@read')->name('adminpanel.read')->middleware('admin');
 
 
 
