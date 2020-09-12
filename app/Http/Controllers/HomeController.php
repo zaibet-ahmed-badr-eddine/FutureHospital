@@ -181,6 +181,12 @@ class HomeController extends Controller
         return view('adminpanel.mailbox');
 
     }
+    public function read()
+    {
+        
+        return view('adminpanel.read');
+
+    }
 
     
 
