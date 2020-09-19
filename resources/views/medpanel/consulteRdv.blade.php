@@ -20,6 +20,7 @@
 </section>
 
 <!-- Main content -->
+@if (isset($rdvs) && isset($rdvt))
 <section class="content">
   <div class="container-fluid">
     <div class="row">
@@ -45,7 +46,7 @@
                     <td>{{ $rdv->id }}</td>
                     <td>{{ $rdv->pseudoname }} {{ $rdv->name }}</td>
                     <td>{{ $rdv->rdv_date }}</td>
-                    <td><a href="/gestionrdv/{{$rdv->id}}" class="btn btn-outline-info"><i class="fas fa-play"></i></a></td>
+                    <td><a href="/consultrdv/{{$rdv->id}}" class="btn btn-outline-info"><i class="fas fa-play"></i></a></td>
                   </tr>
                 @endforeach
               </tbody>
@@ -153,6 +154,8 @@
   </div>
   <!-- /.container-fluid -->
 </section>
+@endif
+
 <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->

@@ -64,8 +64,8 @@ Route::post('addrdv', 'RdvController@addRdv')->name('add.rdv');
 
 //nurse functions
 Route::get('/editnursepassword', 'HomeController@editnpassword')->name('medpanel.editmpassword')->middleware('nurse');
-Route::get('/gestionrdv/{id}', 'RdvController@gestionRdv')->name('nursepanel.gestionrdv')->middleware('nurse');
-Route::post('/gestionrdv/{id}', 'RdvController@addMed')->name('add.med')->middleware('nurse');
+Route::get('/gestionrdv/{id}', 'RdvController@gestionRdv')->name('nursepanel.gestionrdv');
+Route::post('/gestionrdv/{id}', 'RdvController@addMed')->name('add.med');
 
 
 
@@ -73,7 +73,7 @@ Route::post('/gestionrdv/{id}', 'RdvController@addMed')->name('add.med')->middle
 //med Fuctions
 Route::get('/rapport/{id}', 'HomeController@rèdigerapport')->name('medpanel.rapport')->middleware('med');
 Route::get('/editmedpassword', 'HomeController@editmpassword')->name('medpanel.editmpassword')->middleware('med');
-Route::get('/consultrdv/{id}', 'RdvController@consultRdv')->name('medpanel.consulteRdv')->middleware('med');
+Route::get('/consultrdv/{id}', 'RdvController@consultRdv')->name('medpanel.consulteRdv');
 Route::post('rediger-rapport/{id}', 'patientController@storeRapport')->name('rediger.rapport')->middleware('med');
 
 //cheif functions
@@ -83,6 +83,7 @@ Route::get('/editcheifpassword', 'HomeController@editcpassword')->name('cheifpan
 Route::get('/dossiermed/{id}', 'patientController@dossierMed')->name('cheifpanel.dossiermed')->middleware('chief');
 Route::get('accept-patient/{id}', 'patientController@acceptPatient')->name('accept.patient')->middleware('chief');
 Route::get('refuse-patient/{id}', 'patientController@refusePatient')->name('refuse.patient')->middleware('chief');
+Route::get('deletepatient/{id}', 'patientController@deletepatient')->name('delete.patient')->middleware('chief');
 
 
 //admin functions
@@ -99,6 +100,9 @@ Route::get('/editadminpassword', 'HomeController@editpassword')->name('adminpane
 Route::get('/consultservicea', 'HomeController@consultservicea')->name('adminpanel.consulterservicea')->middleware('admin');
 Route::get('/mailbox', 'HomeController@mailbox')->name('adminpanel.mailbox')->middleware('admin');
 Route::get('/read/{id}', 'HomeController@read')->name('adminpanel.read')->middleware('admin');
+Route::get('/delete/{id}', 'ContactController@delete')->name('adminpanel.delete')->middleware('admin');
+
+
 
 
 

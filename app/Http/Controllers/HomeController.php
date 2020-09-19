@@ -39,7 +39,7 @@ class HomeController extends Controller
     public function cheifpanelhome()
     {
 
-       $service_id=auth()->user()->service->id;
+       $service_id=Auth::user()->service->id;
        $medcin=count(User::where('role_id','=',3,'AND','service_id','=',$service_id)->get());
        $infirmiere=count(User::where('role_id','=',4,'AND','service_id','=',$service_id)->get());
        $pa=count(Patient::all());

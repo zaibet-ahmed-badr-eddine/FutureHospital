@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\User;
+use App\Service;
 use Auth;
 
 class userController extends Controller
@@ -22,6 +23,9 @@ class userController extends Controller
         $user->bornplace = $request->bornplace;
         $user->birthday = $request->birthday;
         $user->phonenumber = $request->phonenumber;
+        if(Auth::user()->role->role === 'chef_service'){
+            $user->service_id = Auth::user()->service_id;
+    }
         $user->save();
         if(Auth::user()->role->role === 'admin'){
             return redirect('/addmembre');
@@ -66,8 +70,9 @@ class userController extends Controller
     public function editMember($id){
         
         $user = User::find($id);
+        $services=Service::all();
         if(Auth::user()->role->role === 'admin'){
-        return view('adminpanel.editcheifa', ['user'=> $user]);
+        return view('adminpanel.editcheifa', ['user'=> $user,'services'=>$services]);
     }
         if(Auth::user()->role->role === 'chef_service'){
         return view('cheifpanel.editmedc', ['user'=> $user]);
@@ -84,11 +89,14 @@ class userController extends Controller
         $user->bornplace = $request->bornplace;
         $user->birthday = $request->birthday;
         $user->phonenumber = $request->phonenumber;
+        $user->service_id = $request->service_id;
         $user->update();
+
        
 
+        $services=Service::all();
         if(Auth::user()->role->role === 'admin'){
-            return view('adminpanel.editcheifa', ['user'=> $user]);
+            return view('adminpanel.editcheifa', ['user'=> $user,'services'=>$services]);
         }
             if(Auth::user()->role->role === 'chef_service'){
             return view('cheifpanel.editmedc', ['user'=> $user]);

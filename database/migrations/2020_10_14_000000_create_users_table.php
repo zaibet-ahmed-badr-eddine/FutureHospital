@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->foreignId('role_id');
             $table->foreign('role_id')->references('id')->on('roles');
             $table->foreignId('service_id')->nullable();
-            $table->foreign('service_id')->references('id')->on('services');
+            $table->foreign('service_id')->references('id')->on('services')->onDelete('set null');
             $table->string('name');
             $table->string('pseudoname');
             $table->string('email')->unique();
@@ -28,6 +28,7 @@ class CreateUsersTable extends Migration
             $table->date('birthday');
             $table->string('phonenumber');
             $table->string('avatar')->nullable();
+           
             $table->rememberToken();
             $table->timestamps();
         });

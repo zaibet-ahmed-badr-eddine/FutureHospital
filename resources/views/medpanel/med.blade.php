@@ -155,15 +155,6 @@
 
 
 
-          <li class="nav-item has-treeview">
-            <a href="/rapport" class="nav-link">
-              <i class="fas fa-circle nav-icon"></i>
-              <p>
-                rèdiger raport
-                
-              </p>
-            </a>
-          </li>
 
 
           
@@ -188,36 +179,7 @@
             </a>
           </li>
          
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-envelope"></i>
-              <p>
-                Mailbox
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/mailbox/mailbox.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Inbox</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/mailbox/compose.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Compose</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/mailbox/read-mail.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Read</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          </li>
+          
           <li class="nav-header"><hr></li>
           
      

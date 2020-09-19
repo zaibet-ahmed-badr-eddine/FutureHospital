@@ -156,7 +156,7 @@
             </li>
           </ul>
 
-          <a href="#" class="btn btn-outline-primary btn-block"><b>PLUS</b></a>
+          <a href="/editmyinfos" class="btn btn-outline-primary btn-block"><b>PLUS</b></a>
         </div>
    </div>
    </section>

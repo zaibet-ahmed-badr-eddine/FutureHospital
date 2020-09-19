@@ -44,7 +44,7 @@
                         </ul>
                       </div>
                       <div class="col-5 text-center">
-                        <img src="../../dist/img/user1-128x128.jpg" alt="" class="img-circle img-fluid">
+                        <h2 class="lead"><b>Num du Patient : {{ $patient->id }}</b></h2>
                       </div>
                     </div>
                   </div>
@@ -53,10 +53,8 @@
                       <a href="/dossiermed/{{$patient->id}}" class="btn btn-sm btn-outline-success">
                         <i class="fa fa-edit"></i> Dossier 
                       </a>
-                      <a href="" class="btn btn-sm btn-outline-primary">
-                        <i class="fa fa-edit"></i> Modifier
-                      </a>
-                      <a href="" class="btn btn-sm btn-outline-danger">
+                  
+                    <a href="{{route('delete.patient',['id'=>$patient->id])}}" class="btn btn-sm btn-outline-danger">
                         <i class="fas fa-trash-alt"></i> Supprimer
                       </a>
                     </div>
@@ -67,20 +65,7 @@
           </div>
         </div>
         <!-- /.card-body -->
-        <div class="card-footer">
-          <nav aria-label="Contacts Page Navigation">
-            <ul class="pagination justify-content-center m-0">
-              <li class="page-item active"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">4</a></li>
-              <li class="page-item"><a class="page-link" href="#">5</a></li>
-              <li class="page-item"><a class="page-link" href="#">6</a></li>
-              <li class="page-item"><a class="page-link" href="#">7</a></li>
-              <li class="page-item"><a class="page-link" href="#">8</a></li>
-            </ul>
-          </nav>
-        </div>
+      
         <!-- /.card-footer -->
       </div>
       <!-- /.card -->
@@ -90,13 +75,7 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.5
-    </div>
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
-    reserved.
-  </footer>
+
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

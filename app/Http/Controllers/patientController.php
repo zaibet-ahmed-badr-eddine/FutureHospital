@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Patient;
 use App\Rdv;
+use App\User;
+use Auth;
+
 
 
 class PatientController extends Controller
@@ -22,12 +25,21 @@ class PatientController extends Controller
 
     public function showPatient(){
         $patients=Patient::all();
+        if(Auth::user()->role->role === 'chef_service'){
         return view("cheifpanel.consultepatient",["patients"=>$patients]);
+        }
+        if(Auth::user()->role->role === 'medcin'){
+            return view("medpanel.cunsultrdv/1",["patients"=>$patients]);
+        }    
+        
+        
     }
 
     public function dossierMed($id)
     {
         $patient = Patient::find($id);
+        
+
         return view('cheifpanel.dossiermed', ["patient"=> $patient]);
     }
 
@@ -46,7 +58,7 @@ class PatientController extends Controller
         $patient->save();
         $rdv->delete();
         $patients = Rdv::where('confirmed', '=', 1)->get();
-        return view('cheifpanel.cheifpanelhome', ["patients"=> $patients]);
+        return view('cheifpanel.consultepatient', ["patients"=> $patients]);
     }
 
     public function refusePatient($id){
@@ -54,14 +66,23 @@ class PatientController extends Controller
         $patient->delete();
         $patients = Rdv::where('confirmed', '=', 1)->get();
 
-        return view('cheifpanel.cheifpanelhome', ["patients"=> $patients]);
+        return view('cheifpanel.consultepatient', ["patients"=> $patients]);
     }
 
     public function storeRapport(Request $request, $id){
         $patient = Patient::find($id);
         $patient->rapport = $request->rapport;
         $patient->update();
-        return redirect('/');
+        return redirect('/consultrdv/1');
+    }
+
+    
+    public function deletepatient($id){
+        $patient = Patient::find($id);
+        $patient->delete();
+        
+
+        return redirect('/consulte-patient');
     }
 
     

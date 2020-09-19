@@ -25,16 +25,18 @@ class ServiceController extends Controller
     // show edit form
     public function edit($id){
         $service = Service::find($id);
-        return view('adminpanel.editservice', ['service'=> $service]);
+        $chefs = User::where('role_id', '=', 2)->get();
+        return view('adminpanel.editservice', ['service'=> $service, 'chefs'=> $chefs]);
     }
     
     // modify service
-    public function modifyservice(Request $request, $id){
+    public function modifyservice(Request $request, $id ){
         $service = Service::find($id);
         $service->name_s = $request->name_s;
-        $service->name_cs = $request->name_cs;
+        $service->chef_id = $request->chef_id;
         $service->lit_number = $request->lit_number;
         $service->update();
+       
         $services = Service::all();
         return view('adminpanel.consulterservicea', ['services'=> $services]);
     }

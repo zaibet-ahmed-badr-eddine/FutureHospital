@@ -38,8 +38,8 @@ class RdvController extends Controller
 
     }
     public function addRdv(Request $request){
+        
         $rdv = new Rdv();
-       
         $rdv->name = $request->name;
         $rdv->pseudoname = $request->pseudoname;
         $rdv->gender = $request->gender;
@@ -51,7 +51,8 @@ class RdvController extends Controller
         // $rdv->service = $request->service;
         $rdv->save();
 
-            return redirect('/bienvenue');
+            //return redirect('/bienvenue');
+            return view('index');
        
 
       

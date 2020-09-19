@@ -42,12 +42,19 @@
           </div>
 
 
+          <div class="form-group">
+            <label for="s">Ajouter Service</label>
+            <select class="form-control" name="service_id" id="ids" >
+              @foreach ($services as $service)
+                <option value="{{ $service->id }}">{{ $service->name_s }}</option>  
+              @endforeach
+            </select>
+          </div>
+
+
 
        
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
+     
       
       </div> 
 
