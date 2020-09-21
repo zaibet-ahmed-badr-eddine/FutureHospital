@@ -1,6 +1,9 @@
 <?php
 
+use App\Service;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth as Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +24,8 @@ Route::get('/', function () {
     return view('indexx');
 });
 Route::get('/bienvenue', function () {
-    return view('index');
+    $services = Service::all();
+    return view('index', ['services'=> $services]);
 });
 
 Auth::routes();
@@ -66,6 +70,8 @@ Route::post('addrdv', 'RdvController@addRdv')->name('add.rdv');
 Route::get('/editnursepassword', 'HomeController@editnpassword')->name('medpanel.editmpassword')->middleware('nurse');
 Route::get('/gestionrdv/{id}', 'RdvController@gestionRdv')->name('nursepanel.gestionrdv');
 Route::post('/gestionrdv/{id}', 'RdvController@addMed')->name('add.med');
+Route::get('/etatpatient', 'HomeController@etatpatient')->name('nursepanel.etatpatient');
+Route::get('/etatactual', 'HomeController@etatactual')->name('nursepanel.etatactual');
 
 
 
@@ -75,6 +81,8 @@ Route::get('/rapport/{id}', 'HomeController@rèdigerapport')->name('medpanel.rap
 Route::get('/editmedpassword', 'HomeController@editmpassword')->name('medpanel.editmpassword')->middleware('med');
 Route::get('/consultrdv/{id}', 'RdvController@consultRdv')->name('medpanel.consulteRdv');
 Route::post('rediger-rapport/{id}', 'patientController@storeRapport')->name('rediger.rapport')->middleware('med');
+Route::get('/etatpatient', 'HomeController@etatpatient')->name('medpanel.etatpatient');
+Route::get('/etatactual', 'HomeController@etatactual')->name('medpanel.etatactual');
 
 //cheif functions
 Route::get('consulte-patient', 'patientController@showPatient')->name('show.patient')->middleware('chief');

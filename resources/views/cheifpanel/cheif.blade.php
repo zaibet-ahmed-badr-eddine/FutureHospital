@@ -83,12 +83,20 @@
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
-
+       
+            
+      
+          
+      
         @isset($patients)
+     
+            
+        
             
           <a class="nav-link" data-toggle="dropdown" href="#">
             <i class="far fa-comments"></i>
             @if (count($patients) > 0)
+           
               <span class="badge badge-danger navbar-badge">new</span>            
             @endif
           </a>
@@ -98,25 +106,27 @@
               <a href="#" class="dropdown-item">
                 <!-- Message Start -->
                 <div class="media">
-                  <img src="{{ asset('dist/img/user1-128x128.jpg') }}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                   <div class="media-body">
                     <h3 class="dropdown-item-title">
                       {{ $patient->name }}
-                      <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                      <span class="float-right text-danger"><i class="fas fa-procedures"></i></span>
                     </h3>
-                    <p class="text-sm">{{ $patient->pseudoname }}</p>
+                   <h3> <p class="text-sm">{{ $patient->pseudoname }}</p></h3>
                   </div>
                 </div>
                 <!-- Message End -->
               </a>
               &nbsp;
               &nbsp;
-              <a href="{{ route('accept.patient', ['id'=> $patient->id])}}" class="btn btn-primary btn-sm">O</a>
-              <a href="{{ route('refuse.patient', ['id'=> $patient->id])}}" class="btn btn-danger btn-sm">X</a>
+             
+              <a href="{{ route('accept.patient', ['id'=> $patient->id])}}" class="btn btn-outline-primary btn-sm">Accepter</a>
+              <a href="{{ route('refuse.patient', ['id'=> $patient->id])}}" class="btn btn-outline-danger btn-sm">Refuser</a>
+
               <div class="dropdown-divider"></div>
           @endforeach
             </div>
         @endisset
+       
 
       </li>
      
@@ -128,7 +138,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/cheifdashboard" class="brand-link text-center" >
-      <span class="brand-text font-weight-light" >PANNEAU CHEF SERVICE</span>
+      <span class="brand-text font-weight-light" >PANNEAU CHEF SERVICE .</span>
     </a>
 
     <!-- Sidebar -->

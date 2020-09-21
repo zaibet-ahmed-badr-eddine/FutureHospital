@@ -30,4 +30,11 @@ class service extends Model
           return ("no chef ");
       }
     }
+
+
+
+    public function rdvs()
+    {
+      return $this->hasMany('App\Rdv');
+    }
 }

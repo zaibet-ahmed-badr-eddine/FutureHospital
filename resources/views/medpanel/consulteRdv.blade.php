@@ -119,14 +119,7 @@
                 <tr>
                   <td>Date du Rendez-Vous</td>
                   <td>{{ $rdvt->rdv_date }}</td>
-                <tr>
-                  <td>Dossier</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar bg-primary" style="width: 30%"></div>
-                    </div>
-                  </td>
-                </tr>
+             
                 <tr>
                   
                  

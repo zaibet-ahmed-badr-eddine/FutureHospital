@@ -15,6 +15,8 @@ class CreateRdvsTable extends Migration
     {
         Schema::create('rdvs', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('service_id');
+            $table->foreign('service_id')->references('id')->on('services');
             $table->string('name');
             $table->string('pseudoname');
             $table->string('gender');
@@ -27,7 +29,8 @@ class CreateRdvsTable extends Migration
             $table->string('medcin')->default('');
             $table->date('rdv_date')->default('2015-01-30');
             $table->boolean('confirmed')->default(0);
-            //$table->string('upload_file');
+            $table->boolean('confirmed_by_chief')->default(0);
+            
 
 
             $table->timestamps();

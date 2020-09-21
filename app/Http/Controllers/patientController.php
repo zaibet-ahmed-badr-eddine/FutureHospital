@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use App\Patient;
 use App\Rdv;
 use App\User;
-use Auth;
+//use Auth;
+use Illuminate\Support\Facades\Auth as Auth;
+
 
 
 
@@ -24,7 +26,7 @@ class PatientController extends Controller
 
 
     public function showPatient(){
-        $patients=Patient::all();
+        $patients=Patient::where('service_id','=',Auth::user()->service_id)->get();
         if(Auth::user()->role->role === 'chef_service'){
         return view("cheifpanel.consultepatient",["patients"=>$patients]);
         }
@@ -46,6 +48,11 @@ class PatientController extends Controller
     public function acceptPatient($id){
         $patient = new patient();
         $rdv = Rdv::find($id);
+        $rdv->confirmed_by_chief = 1;
+        $rdv->update();
+
+        $patient->id = $rdv->id;
+        $patient->service_id = $rdv->service_id;
         $patient->name = $rdv->name;
         $patient->pseudoname = $rdv->pseudoname;
         $patient->email = $rdv->email;
@@ -56,8 +63,10 @@ class PatientController extends Controller
         $patient->phonenumber = $rdv->phonenumber;
       
         $patient->save();
-        $rdv->delete();
-        $patients = Rdv::where('confirmed', '=', 1)->get();
+        
+        
+        $patients = Rdv::where('confirmed', '=', 1)->where('confirmed_by_chief','=', 0)->get();
+        
         return view('cheifpanel.consultepatient', ["patients"=> $patients]);
     }
 

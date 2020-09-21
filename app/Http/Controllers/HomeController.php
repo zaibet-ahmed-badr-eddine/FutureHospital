@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Auth;
+// use Auth;
 use App\Service;
 use App\Rdv;
 use App\User;
 use App\Patient;
 use App\Contact;
+use Illuminate\Support\Facades\Auth as Auth;
+
 class HomeController extends Controller
 {
     /**
@@ -39,12 +41,12 @@ class HomeController extends Controller
     public function cheifpanelhome()
     {
 
-       $service_id=Auth::user()->service->id;
-       $medcin=count(User::where('role_id','=',3,'AND','service_id','=',$service_id)->get());
-       $infirmiere=count(User::where('role_id','=',4,'AND','service_id','=',$service_id)->get());
-       $pa=count(Patient::all());
+       
+       $medcin=count(User::where('role_id','=',3)->where('service_id','=',Auth::user()->service_id)->get());
+       $infirmiere=count(User::where('role_id','=',4)->where('service_id','=',Auth::user()->service_id)->get());
+       $pa=count(Patient::where('service_id','=',Auth::user()->service_id)->get());
     
-        $patients = Rdv::where('confirmed', '=', 1)->get();
+        $patients = Rdv::where('confirmed', '=', 1)->where('confirmed_by_chief','=', 0)->get();
         return view('cheifpanel.cheifpanelhome', ['patients'=> $patients,'medcin'=>$medcin,'infirmiere'=>$infirmiere,'pa'=>$pa]);
     }
 
@@ -186,6 +188,36 @@ class HomeController extends Controller
     {
         $mail = Contact::find($id);
         return view('adminpanel.read', ['mail'=> $mail]);
+
+    }
+
+
+    public function etatpatient()
+    {
+        $patients=Patient::all();
+        if(Auth::user()->role->role === 'medcin'){
+                
+            return view('medpanel.etatpatient',["patients"=>$patients]);
+        }
+        if(Auth::user()->role->role === 'infermiere'){
+            return view('nursepanel.etatpatient',["patients"=>$patients]);
+        }
+        
+     
+
+    }
+    public function etatactual()
+    {
+        
+        if(Auth::user()->role->role === 'medcin'){
+                
+            return view('medpanel.etatactual');
+        }
+        if(Auth::user()->role->role === 'infermiere'){
+            return view('nursepanel.etatactual');
+        }
+        
+       
 
     }
 

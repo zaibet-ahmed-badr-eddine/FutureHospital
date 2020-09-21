@@ -140,7 +140,7 @@
 
 
         <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="/etatpatient" class="nav-link">
               <i class="fas fa-circle nav-icon"></i>
               <p>
                 Consulter l'etat actuel

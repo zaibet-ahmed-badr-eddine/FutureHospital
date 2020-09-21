@@ -53,7 +53,7 @@
           @endforeach
         </tbody>
       </table>
-    </div>ooow boy 
+    </div>
     <!-- /.card-body -->
 
   </div>
@@ -120,19 +120,9 @@
             <td>Adresse</td>
             <td>{{ $rdvt->adress }}</td>
           </tr>
+       
           <tr>
-            <td>Service</td>
-            <td>{{ $rdvt->service }}</td>
-          </tr>
-          <tr>
-          <tr>
-            <td>Dossier</td>
-            <td>
-              <div class="progress progress-xs progress-striped active">
-                <div class="progress-bar bg-primary" style="width: 30%"></div>
-              </div>
-            </td>
-          </tr>
+          
           <tr>
             
           
@@ -159,25 +149,21 @@
               @endforeach
           </div>
         </div>
-    
-        <div class="form-group row">
+         
+         
           
-          <label class="col-sm-2 col-form-label" for="exampleCheck2">Date du RDV</label>
-          <div class="col-sm-10">
-              <input type="date" class="form-control" id="exampleCheck2" name="rdv_date">
-            </div>
-          </div>
-        </div>
-      </div>
     
-        <div class="form-group row">
-          <div class="offset-sm-2 col-sm-10">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck2">
-              <label class="form-check-label" for="exampleCheck2">Remember me</label>
-            </div>
-          </div>
-        </div>
+            <div class="form-group row">
+          
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Date RDV</label>
+                 <div class="col-sm-10">
+                        <input type="date" class="form-control" id="exampleCheck2" name="rdv_date">
+                  </div>
+             </div>
+        
+         
+    
+     
         <div class="card-footer">
           <button type="submit" class="btn btn-outline-info">Ajouter</button>
           <button type="submit" class="btn btn-outline-danger float-right">Supprimer</button>
