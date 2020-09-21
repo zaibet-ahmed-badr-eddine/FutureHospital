@@ -342,25 +342,14 @@
               </div>
               
 
-              <div class="form-group">
-
-
-
-                {{-- <select class="form-control br-radius-zero" style="width: 100%;" name="service">            
-                  <option selected="selected">cardio</option>
-                  <option >neuro</option>
-                  <option >pneumo</option>
-                  <option >radio</option></select> --}}
-
-                <div class="validation"></div>
-              </div>
+             
 
 
 
               
           <div class="form-group">
-            <label for="s">Ajouter Service</label>
-            <select class="form-control" name="service_id" id="ids" >
+           
+            <select class="form-control br-radius-zero" name="service_id" id="ids" >
               @foreach ($services as $service)
                 <option value="{{ $service->id }}">{{ $service->name_s }}</option>  
               @endforeach
@@ -486,7 +475,6 @@
               <ul class="social-icon">
                 <li class="bglight-blue"><i class="fa fa-facebook"></i></li>
                 <li class="bgred"><i class="fa fa-google-plus"></i></li>
-                <li class="bgdark-blue"><i class="fa fa-linkedin"></i></li>
                 <li class="bglight-blue"><i class="fa fa-twitter"></i></li>
               </ul>
             </div>

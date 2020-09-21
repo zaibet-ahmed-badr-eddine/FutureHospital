@@ -40,7 +40,8 @@ class HomeController extends Controller
 
     public function cheifpanelhome()
     {
-
+    
+    
        
        $medcin=count(User::where('role_id','=',3)->where('service_id','=',Auth::user()->service_id)->get());
        $infirmiere=count(User::where('role_id','=',4)->where('service_id','=',Auth::user()->service_id)->get());
@@ -49,6 +50,7 @@ class HomeController extends Controller
         $patients = Rdv::where('confirmed', '=', 1)->where('confirmed_by_chief','=', 0)->get();
         return view('cheifpanel.cheifpanelhome', ['patients'=> $patients,'medcin'=>$medcin,'infirmiere'=>$infirmiere,'pa'=>$pa]);
     }
+
 
     public function medpanelhome()
     {

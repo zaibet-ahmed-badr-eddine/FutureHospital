@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\user;
-use Auth;
+//use Auth;
 use Validator;
+use Illuminate\Support\Facades\Auth as Auth;
+
 
 class LoginController extends Controller
 {
