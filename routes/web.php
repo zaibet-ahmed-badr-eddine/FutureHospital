@@ -92,6 +92,11 @@ Route::get('/dossiermed/{id}', 'patientController@dossierMed')->name('cheifpanel
 Route::get('accept-patient/{id}', 'patientController@acceptPatient')->name('accept.patient')->middleware('chief');
 Route::get('refuse-patient/{id}', 'patientController@refusePatient')->name('refuse.patient')->middleware('chief');
 Route::get('deletepatient/{id}', 'patientController@deletepatient')->name('delete.patient')->middleware('chief');
+Route::get('addpatient', 'HomeController@addpatient')->name('add.patient')->middleware('chief');
+Route::post('addnewpatient', 'patientController@addpatient')->name('add.newpatient')->middleware('chief');
+
+
+
 
 
 //admin functions

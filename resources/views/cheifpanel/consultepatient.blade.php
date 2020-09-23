@@ -27,6 +27,50 @@
       <div class="card card-solid">
         <div class="card-body pb-0">
           <div class="row d-flex align-items-stretch">
+
+
+
+
+            {{-- ============================================================== --}}
+
+
+
+
+
+<div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+  <div class="card bg-light  " >
+    
+    <div class="card-body pt-0">
+      <div class="row">
+        <div class="col-12">
+
+          <div class="icon text-center"  >
+            <div style="opacity: 0">kmfdlgmlksdflhjdflkhlnjhkkdfjkjlhdflkfmlglkhjmdlkfjg </div>
+            <a href={{route('add.patient')}} class="nav-link">
+            <i class="ion ion-person-add" style="font-size:180px"></i></a>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+
+
+{{-- ============================================================== --}}
+
+
+
+
+
+
+
+
          @foreach ($patients as $patient) 
               <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
                 <div class="card bg-light">

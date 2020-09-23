@@ -94,6 +94,31 @@ class PatientController extends Controller
         return redirect('/consulte-patient');
     }
 
+
+    public function addpatient(Request $request){
+
+        $patient=new Patient();
+        $patient->service_id=Auth::user()->service_id;
+        $patient->name=$request->name;
+        $patient->pseudoname=$request->pseudoname;
+        $patient->gender=$request->gender;
+        $patient->email=$request->email;
+        $patient->bornplace=$request->bornplace;
+        $patient->birthday=$request->birthday;
+        $patient->adress=$request->adress;
+        $patient->phonenumber=$request->phonenumber;
+        $patient->save();
+
+        return redirect('/consulte-patient');
+
+
+
+
+
+
+
+    }
+
     
 
 

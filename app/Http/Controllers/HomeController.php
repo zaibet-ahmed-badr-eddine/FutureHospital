@@ -223,6 +223,11 @@ class HomeController extends Controller
 
     }
 
+    public function addpatient(){
+
+        return view('cheifpanel.addpatient');
+    }
+
     
 
 }
