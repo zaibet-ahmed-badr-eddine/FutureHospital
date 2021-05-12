@@ -27,6 +27,6 @@
     "dependencies": {
         "@ckeditor/ckeditor5-build-classic": "^21.0.0",
         "admin-lte": "^3.0.5",
-        "codemirror": "^5.57.0"
+        "codemirror": "^5.58.2"
     }
 }
